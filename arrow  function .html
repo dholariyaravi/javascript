@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="font-size: 20px;">
+
+    <!-- JavaScript Arrow Function ...  -->
+
+    <h2 id="t1"></h2>
+    <script>
+        const Arrow = (a, b) => (a + b);
+        document.getElementById('t1').innerHTML = Arrow(6, 14);
+    </script>
+
+    <!-- JavaScript Function/...  -->
+    <h2 id="t2"></h2>
+    <script>
+        let taa;
+
+        taa = function () {
+            return 'hello java';
+        }
+
+        document.getElementById('t2').innerHTML = taa();
+    </script>
+    <hr>
+    <!-- arrow function ///....  -->
+
+    <script>
+        let nam;
+
+        nam = () => {
+            return "object";
+        }
+        document.write(nam());
+    </script>
+    <hr>
+
+    <!-- Arrow Functions Return Value by Default:...  -->
+    <script>
+        let kal;
+
+        kal = () => 'hello ravi';
+
+        document.write(kal());
+    </script>
+    <hr>
+    <script>
+        let aaa;
+
+        aaa = (name) => 'hello' + name;
+        document.write(aaa('rajan'));
+    </script>
+    <hr>
+
+    <button id="t3">click me</button>
+    <h3 id="t4"></h3>
+
+    <script>
+        let heam;
+
+        heam = function () {
+            document.getElementById('t4').innerHTML += this;
+        }
+        window.addEventListener('load', heam);
+
+        document.getElementById('t3').addEventListener('click', heam);
+    </script>
+    <hr>
+
+    <!-- arrow function.... /  -->
+
+    <button id="p1">click me</button>
+    <h2 id="p2"></h2>
+
+    <script>
+        let haaa;
+
+        haaa = () => {
+            document.getElementById('p2').innerHTML += this;
+        }
+        window.addEventListener('load', haaa);
+
+        document.getElementById('p1').addEventListener('click', haaa);
+    </script>
+    <hr>
+
+    <!-- JavaScript class ....  -->
+    <h2 id="a1"></h2>
+    <script>
+        class date {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+        }
+
+        const car1 = new date('ravi', 2022);
+        document.getElementById('a1').innerHTML =
+            car1.name + " " + car1.year;
+    </script>
+    <hr>
+
+    <h3 id="a3"></h3>
+    <script>
+        class ner {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+
+            age() {
+                let date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+
+        const cars2 = new ner('ravi', '2012 ');
+        document.getElementById('a3').innerHTML =
+            "  my cars" + cars2.age() + 'year old';
+    </script>
+    <hr>
+
+
+    <!-- Modules .. export.. import ...  -->
+
+    <p id="demo"></p>
+
+    <script type="module">
+        document.getElementById("demo").innerHTML = message();
+    </script>
+
+    <!-- JavaScript JSON...  -->
+
+    <h3 id="h3"></h3>
+    <script>
+        let mavi = [{
+                'firstname': 'ravi',
+                'lastname': 'dholariya'
+            },
+            {
+                'firstname': 'rajan',
+                'lastname': 'kathiriya'
+            }
+        ]
+        console.log(mavi);
+        document.getElementById('h3').innerHTML =
+            mavi[1].firstname + " " + mavi[1].lastname;
+    </script>
+
+    <!-- JavaScript Debugging... /   -->
+    <script>
+        a = 10;
+        b = 5;
+        c = a + b;
+        console.log(c);
+    </script>
+
+    <hr>
+    <script>
+        let rrr = 64;
+        document.write(rrr);
+    </script>
+    <!-- JavaScript Style Guide../  -->
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="ra1"></h2>
+    <script>
+        let car = {
+            weight: 750,
+            fiat: "volvo",
+            modal: 345,
+            color: "info",
+        }
+        document.getElementById('ra1').innerHTML = "this car is " + car.fiat + ".";
+    </script>
+    <hr>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------- -->
+    <h3 id="ra3"></h3>
+    <script>
+        var ravi = {
+            fristname: " ravi",
+            lastname: 'dholariya',
+            Age: 20,
+            college: "ms univarcity",
+
+            id: function () {
+
+                return " my name is" + this.fristname + " " + this.lastname + " age " + this.Age + " college " +
+                    this.college
+            }
+        }
+        document.getElementById('ra3').innerHTML = ravi.id();
+    </script>
+    <hr>
+    <h3 id="ra4"></h3>
+
+    <button onclick="document.getElementById('ra4').innerHTML= Date()">click</button>
+
+    <!-- ============================================================================================================================ -->
+    <h1 id="ra5"></h1>
+    <button onclick="ravi1()">click me</button>
+    <script>
+        function ravi1() {
+            document.getElementById('ra5').innerHTML = Date();
+        }
+    </script>
+
+
+
+    <!-- <h1 id="demo"></h1>
+    <button onclick="hiro()">hyyy click</button>
+
+    <script>
+        function hiro() {
+            document.getElementById('demo').innerHTML = Date();
+        }
+    </script> -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- forEach methad  -->
+    <h2 id="demo1"></h2>
+    <script>
+        const aa = [18, 23, 4, 34, 34, 97];
+
+        let rav = " ";
+        aa.forEach(myname);
+        document.getElementById('demo1').innerHTML = rav;
+
+        function myname(value, index, array) {
+            rav += value + ' <br>';
+        }
+    </script>
+    <hr>
+    <!-- map mathad...  -->
+    <h1 id="demo2"></h1>
+    <script>
+        const net = [47, 56, 24, 11, 34, 7, 54];
+        const net1 = net.map(mydate);
+        document.getElementById('demo2').innerHTML = net1;
+
+        function mydate(value, index, array) {
+            return value * 2;
+        }
+    </script>
+    <hr>
+
+    <h2 id="demo3"></h2>
+    <script>
+        const num1 = [23, 50, 15, 65, 45, 23, 14];
+        const num2 = num1.map(nummy);
+        document.getElementById('demo3').innerHTML = num2;
+
+        function nummy(value) {
+            return value - 10;
+        }
+    </script>
+    <hr>
+    <!-- filter ......  -->
+    <h2 id="demo4"></h2>
+    <script>
+        const tt1 = [13, 24, 35, 15, 37, 48, 34];
+        let tt2 = tt1.filter(myfilter);
+        document.getElementById('demo4').innerHTML = tt2;
+
+        function myfilter(value, index, array) {
+            return value > 20;
+        }
+    </script>
+    <hr>
+    <!-- reduce....  -->
+
+    <h3 id="demo6"></h3>
+    <script>
+        const rajan = [3, 13, 26, 31, 6, 34];
+        let ravi1 = rajan.reduce(myfunction);
+        document.getElementById('demo6').innerHTML = 'the total ' + ravi1;
+
+        function myfunction(total, value, index, array) {
+            return total + value;
+        }
+    </script>
+    <hr>
+    <!-- reduce right..  -->
+    <h3 id="demo7"></h3>
+    <script>
+        const kal = [23, 4, 34, 24, 64, 35, 1];
+        let kal1 = kal.reduceRight(myfunction1);
+
+        document.getElementById('demo7').innerHTML = "total value" + kal1;
+
+        function myfunction1(total, value, index, array) {
+            return value +total ;
+        }
+    </script>
+    <hr>
+    <!-- every.....  -->
+    <!-- bathi value jo > 18 kartha moti hoy to true ave nakar false..  -->
+
+    <h2 id="demo8"></h2>
+    <script>
+        const sim = [19, 20, 35, 19, 68];
+        let sim1 = sim.every(myevery);
+        document.getElementById('demo8').innerHTML = "vlue =:" + sim1;
+
+        function myevery(value, index, array) {
+            return value > 18;
+        }
+    </script>
+    <hr>
+    <!-- some ....  -->
+    <!-- value  card mache temathi koy pan aek value jo > 65 kartha ochi hase to false nakar true -->
+    koy pan aek value hoy to pna chale;
+    <h3 id="demo9"></h3>
+    <script>
+        const card = [16, 23, 34, 15, 61, 55];
+        let card1 = card.some(mysome1);
+
+        document.getElementById('demo9').innerHTML = card1;
+
+        function mysome1(value, index, array) {
+            return value > 62;
+        }
+    </script>
+    <hr>
+    <!-- indexOf ....  -->
+    <h2 id="demo10"></h2>
+    <script>
+        const ind = [23, 55, 12, 45, 7, 69];
+        const ind2 = ind.indexOf(7) + 2
+        document.getElementById('demo10').innerHTML = ind2;
+    </script>
+    <hr>
+    <!-- lasindexof....  -->
+    <h2 id="demo11"></h2>
+    <script>
+        const con = ['apple', 'banana', 'mengo', 'kiwi'];
+        const con2 = con.lastIndexOf('apple') + 1;
+        document.getElementById('demo11').innerHTML = con2;
+    </script>
+    <hr>
+    <!-- find()...  -->
+    <!-- >20 litha hoy and 20 pachi jje 'dem' ma line ma value hase te aav che.  -->
+    <h1 id="demo12"></h1>
+    <script>
+        const dem = [9, 15, 18, 36, 55, 20];
+        let dem2 = dem.find(myfunction2);
+        document.getElementById('demo12').innerHTML = dem2;
+
+        function myfunction2(value, index, array) {
+            return value > 19;
+        }
+    </script>
+    <hr>
+    <!-- ket la index par che te batha ve..  -->
+    <!-- findIndex..  -->
+    <h2 id="demo13"></h2>
+    <script>
+        const tw1 = [12, 34, 45, 16, 45];
+        let ttt2 = tw1.findIndex(myfunction3);
+        document.getElementById('demo13').innerHTML = ttt2;
+
+        function myfunction3(value, index, array) {
+            return value > 36;
+        }
+    </script>
+    <hr>
+    <!-- from...  -->
+    <h2 id="demo14"></h2>
+    <script>
+        const mya = Array.from('ravi dholariya');
+        document.getElementById('demo14').innerHTML = mya;
+    </script>
+    <hr>
+    <!-- array keys....  -->
+    <h2 id="rr1"></h2>
+    <script>
+        const new1 = ['oudi', 'BMw', 'mrcd', 'i10']
+        let cars = new1.keys();
+
+        let name1 = " ";
+        for (let x of cars) {
+            name1 += x + "<br>";
+        }
+        document.getElementById('rr1').innerHTML = name1;
+    </script>
+    <hr>
+    <!-- entries()....  -->
+    <h3 id="rr2"></h3>
+    <script>
+        const dat1 = ['apple','banana','mengo','kiwi']
+        let btt = dat1.entries();
+
+        for( let y of btt){
+            document.getElementById('rr2').innerHTML += y + "<br>";
+        }
+    </script>
+    <hr>
+    <!-- includes...  -->
+    <h3 id="rr4"></h3>
+    <script>
+          const app = ['apple','banana','mengo','kiwi'];
+          document.getElementById('rr4').innerHTML = app.includes('mengo');
+
+    </script>
+
+    <hr>
+    <hr>
+    <!-- ==================================== -->
+
+
+<script src="javascript/lteration pre .js"></script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

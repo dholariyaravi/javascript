@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="na1"></h2>
+    <script>
+        const name = {}
+        name.fnmae = "ravi",
+            name.lname = "senjaliya",
+            name.age = 20
+
+        const y = name;
+        y.lname = 'dholariya';
+
+        document.getElementById("na1").innerHTML =
+            name.fnmae + "  " + name.lname;
+    </script>
+    <hr>
+
+    <!-- ---------------------------------------------- -->
+    <!-- <h2 id="r1"></h2>
+    <script>
+      let ra = "";
+      const myobj = {
+        age : 20 ,
+        lnmae :'ravi' ,
+        cars :[
+            {name:"nad", models:["jjmcmf","456747","ydyncn4"]},
+            {name:"rry", models:["bd","4867","y8gmy4"]},
+            {name:"hrd", models:["jpff","4987","jf85"]},
+        ]
+      }
+      for (let p in myobj.cars){
+        ra += "<h1>" + myobj.cars[p].name + "</h1>";
+         for (let l in myobj.cars[l].models) {
+            ra += myobj.cars[p].models[l] + "<br>";
+         }
+      }
+        
+      document.getElementById('r1').innerHTML = ra ;
+    </script>
+ -->
+    <hr>
+    <script>
+        const nam = {
+            fname: "ravi",
+            lname: "senjaliya",
+            age: 20,
+        };
+        nam.fullname = function () {
+            return (this.fname + " " + this.lname).toUpperCase();
+        };
+        document.write(nam.fullname());
+    </script>
+    <hr>
+    <!-- JavaScript Display Objects...  -->
+    <hr>
+    <script>
+        let txt = "" ;
+        const nam1 = {
+            fname: "rajan",
+            lname: "kathiriay",
+            age: 20,
+        };
+        for (let k in nam1){
+        txt += nam1[k] + "<br>" ;
+        }
+        document.write(txt);
+    </script>
+    <hr>
+    <script>
+         const nam2 = {
+            fname: "milan",
+            lname: "senlaliya",
+            age: 21,
+        };
+        document.write (Object.values(nam2));
+    </script>
+    <hr>
+    <script>
+        const nam3 = {
+           fname: "jay",
+           lname: "senjaliya",
+           today: new Date(),
+           age : function () {return 48;}
+       };
+       document.write (JSON.stringify(nam3));
+   </script>
+   <hr>
+
+   <script>
+    const person ={
+     cars: "oudit",
+     age : function () {return BMW;}
+    };
+    person.age = person.age.toString();    
+
+    document.write(JSON.stringify(person));
+   </script>
+   <hr>
+    <h3 id="r3"></h3>
+   <!-- JavaScript Object Accessors...  -->
+   <script>
+    const person1 = {
+        lname : "ravi",
+        fnmae : "dholariya",
+        fullname : "new nme",
+        get aem() {
+            return this.fullname;
+        }
+    };
+    document.getElementById('r3').innerHTML = person1.aem ;
+   </script>
+   <hr>
+    <script>
+        const name2 = {
+            name : "ravi",
+            lname : 'senjaliya',
+            get newname(){
+                return (this.name +" "+ this.lname).toUpperCase();
+            }
+        }
+        document.write(name2.newname);
+    </script>
+    <hr>
+    <h3 id="tt1"></h3>
+
+    <script>
+        function pera (first, last,age,total){  
+        this.firstnmae = first;
+        this.lastname  = last ;
+        this.age = age ;
+        this.total = total ;
+        this.newadd = "newproparti"
+        }
+        const nameol = new pera ("ravi","dholariya",20,201);
+        const namem = new pera ( "milan","senjaliya",22,366);
+
+        nameol .name = function (){
+            return this.age +" "+ this.age ;
+        }
+
+        document.getElementById('tt1').innerHTML = 
+         "my age is"+nameol.name()  + "my fred age "+ namem.age + " ,   "+ nameol.newadd;   
+    </script>
+    <hr>
+    <!-- JavaScript Object Prototypes....  -->
+    <h3 id="tt2"></h3>
+    <script>
+        function idnew (first ,last ,age ,cllas){
+            this. firstnmae = first;
+            this.lastname = last;
+            this.age = age;
+            this.cllas = cllas;
+        }
+        const myfred = new idnew ("darshit","akhsbari",21,"f-11");
+        const mynewfred = new idnew ("milan","senjaliya",22,"f-16");
+
+        idnew.prototype.nationaliyt = " nationaliyt1111"
+
+        document.getElementById('tt2').innerHTML =
+          "my fred name is  "  +  myfred.firstnmae  +" age is "+ mynewfred.age + myfred.nationaliyt;
+
+    </script>
+    <hr>
+    <!-- JavaScript Iterables....  -->
+    <script>
+        const srinag = "javascrip";
+
+        let srt = "";
+        for(let k of srinag){
+            srt += k +"<br>";
+        }
+        document.write(srt);
+    </script>
+    <hr>
+    <h3 id="g1"></h3>
+    <script>
+        function myfunction() {
+          let f = 0;
+          return{
+            next1: function(){
+             f += 20;
+             return {value:f , done:false};
+            }
+          }
+        }
+        // creat iterable... 
+        const f =myfunction();
+            f. next1(); 10 ; 
+            f. next1(); 20 ; 
+            f. next1(); 30 ; 
+            document.getElementById('g1').innerHTML = f.next1().value
+    </script>
+    <hr>
+
+    <h3 id="g2"></h3>
+    <script>
+        myName = {} ;
+
+        myName [Symbol.iterator] = function(){
+            let l = 0 ;
+            done= false ;
+            return {
+             next() {
+              l += 10 ;
+              if (l == 100){done = true}
+              return {value:l, done:done};
+             }
+          }    
+        }
+        let text = "";
+        for (let l of myName){
+            text += l +"<br>" ;
+        }
+        document.getElementById ('g2').innerHTML = text ;   
+    </script>
+    <hr>
+
+    <!-- JavaScript Sets....////  -->
+    <script>
+        const letar = new Set (["p","c","r"]);
+
+        letar.add ("a");
+        letar.add ("c");
+        letar.add ("b");
+
+        document.write(letar.size);
+    </script>
+    <hr>
+    <script>
+        const letr = new Set ([1,2,3,4,5,6]);
+
+        let paa = "" ;
+        letr.forEach (function (value) {
+            paa += value  + "<br>"
+        })
+        document.write(paa);
+    </script>
+    <hr>
+    <!-- JavaScript Maps.....  -->
+    <script>
+        const bana = new Map ([
+            ["apple","200"],
+            ["banana","400"],
+            ["mango","600"],
+        ])
+       let text2 = "";
+      for (let d of bana.entries()){
+        text2 += d + "<br>" ;
+      }
+        document.write(text2); 
+
+    </script>
+
+ 
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="r1"></h2>
+    <script>
+        const num = [10, 20, 30, 40, 50, 60, 70];
+
+        let text = " ";
+        for (let r = 0; r < 7; r++) {
+            text += num[r] + " <br>";
+        }
+
+        document.getElementById('r1').innerHTML = text;
+    </script>
+    <hr>
+
+    <h1 id="r2"></h1>
+
+    <script>
+        const num1 = ["BMW", "Volvo", "Saab", "Ford", "Fiat", ];
+
+        let testa = " ";
+        for (let y = 0; y < num1.length; y++) {
+            testa += num1[y] + " <br>";
+        }
+        document.getElementById('r2').innerHTML = testa;
+    </script>
+    <hr>
+    <h2 id="r3"></h2>
+
+    <script>
+        let tes = '';
+
+        for (let p = 0; p <= 17; p++) {
+            tes += +p + " <br>";
+        }
+        document.getElementById('r3').innerHTML = tes;
+    </script>
+    <hr>
+    <h3 id="r4"></h3>
+    <script>
+        const num11 = ["BMW", "Saab", "Ford", "Fiat"];
+        let a, name, teax;
+        for (a = 0, name = num11.length, teax = " "; a < name; a++) {
+            teax += num11[a] + "<br>";
+        }
+        document.getElementById('r4').innerHTML = teax;
+    </script>
+    <hr>
+    <h2 id="r5"></h2>
+    <script>
+        const nu1 = ["BMW", "Saab", "BMW", "Volvo", "Ford", "Fiat"];
+
+        let r = 2;
+        let lan = nu1.length;
+        let teax1 = " ";
+
+        for (; r < lan; r++) {
+            teax1 += nu1[r] + '<br>';
+        }
+        document.getElementById('r5').innerHTML = teax1;
+    </script>
+    <hr>
+
+    <!-- =======================================================================================  -->
+    <!-- Loop for in.....  -->
+
+    <!-- object.....  -->
+    <h1 id="t1"></h1>
+    <script>
+        const name1 = {
+            name: 'ravi',
+            laname: 'dholariya',
+            age: 20,
+        }
+
+        let idv = " ";
+        for (let g in name1) {
+            idv += name1[g] + " ";
+
+        }
+        document.getElementById('t1').innerHTML = idv;
+    </script>
+    <hr>
+    <!-- for in array....  -->
+    <h2 id="t2"></h2>
+    <script>
+        const number = [12, 19, 20, 45, 36, 67, 88];
+
+        let nam = " ";
+        for (let a in number) {
+            nam += number[a] + " ";
+        }
+        document.getElementById('t2').innerHTML = nam;
+    </script>
+    <hr>
+    <!-- forEach..... ()...  -->
+    <h3 id="t3"></h3>
+    <script>
+        const numner1 = [34, 57, 57, 12, 4, 71];
+
+        let num2 = " ";
+        numner1.forEach(myfunction);
+        document.getElementById('t3').innerHTML = num2;
+
+        function myfunction(value, index, Array) {
+            num2 += value + ' ';
+        }
+    </script>
+    <hr>
+    <!-- task.............. ///////////////////////////////=================== -->
+
+    <!-- i ilke javascript.... 5time  -->
+
+    <h3 id="q1"></h3>
+    <script>
+        // const java = ['i ilke javascript '];
+
+        let javascri = " ";
+
+        for ( let p = 1; p <= 5; p++ ){
+        javascri +=  p + "i ilke javascript"  +'<br> ';
+        }
+        document.getElementById('q1').innerHTML = javascri ;
+    </script>
+    <hr>
+    <!-- ------------------------ -->
+
+    <h2 id="q2"></h2>
+    <script>
+        const myname = [1, 4, 44, 64, 55, 24, 32, 55, 19, 17, 74, 22, 23];
+
+        let raj = myname.reduce((pre, paa) => {
+            return Math.max( pre ,paa)
+        });
+        document.getElementById('q2').innerHTML = myname ;
+
+      
+        // document.write(Math.min(100, 34, 56, 56, 22. - 132, -6));
+    </script>
+    <hr>
+
+    
+    <!-- object..... {} -->
+    <h3 id="a1"></h3>
+    <script>
+        const name11 = {name:'kamal', course:'full stack', age :"25"};
+        
+        let ravi = " ";
+        for ( let b in  name11){
+            ravi += name11 [b] +" "  ;
+        }
+        document.getElementById('a1').innerHTML = ravi ;
+    </script>
+    <hr>
+    <!-- Array..... ([])..  -->
+    <h2 id="a2"></h2>
+    <script>
+        const Array =[5, 34, 12,89,23,7];
+
+        let mt1 = " ";
+        for (let m in Array){
+            mt1 += Array [m] +" " ;
+        }
+        document.getElementById('a2').innerHTML = mt1 ;
+    </script>
+    <hr>
+
+    <h2 id="a3"></h2>
+    <script>
+        let num4 = " ";
+
+        for ( let l = 0 ; l <= 100; l++){
+            num4 += l +'<br>' ;
+        }
+        document.getElementById('a3').innerHTML = num4 ;
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

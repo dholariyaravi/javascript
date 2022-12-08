@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="ra1"></h1>
+    <h1 id="ra2"></h1>
+    <h1 id="ra3"></h1>
+    <h1 id="ra4"></h1>
+    <h1 id="ra5"></h1>
+    <h1 id="ra6"></h1>
+    <h1 id="ra7"></h1>
+    <h1 id="ra8"></h1>
+
+    <script>
+        var a = 50;
+        a += 40;
+        document.getElementById('ra1').innerHTML = a;
+    </script>
+    <script>
+        var a = 20;
+        a -= 30;
+        document.getElementById('ra2').innerHTML = a;
+    </script>
+    <script>
+        var b = 29;
+        b %= 10;
+        document.getElementById('ra3').innerHTML = b;
+    </script>
+    <script>
+        var a = 300;
+        a *= 20;
+        document.getElementById('ra4').innerHTML = a;
+    </script>
+    <script>
+        var c = 10;
+        c **= 2;
+        document.getElementById('ra5').innerHTML = c;
+    </script>
+    <script>
+        var a = 45;
+        a /= 10;
+        document.getElementById('ra6').innerHTML = a;
+    </script>
+    <script>
+        var d = 25;
+        d -= 10;
+        document.getElementById('ra7').innerHTML = d;
+    </script>
+
+
+    <p id="rv1"></p>
+    <script>
+        const ravi ={
+            firstname: "ravi dholatiya",
+            school: "kirshna school ",
+            pr : "75",
+            collage : " ms univarcity"
+        };
+        document.getElementById('rv1').innerHTML =  "my name is " +this.firstname + " i have studind in" + ravi.school+ " whit" + ravi.pr + 
+
+        "and i am persuing B.com in "+ ravi.collage;   
+    </script>
+
+    <p id="rav2"></p>
+    <script>
+        var c = 5;
+        c ++ ;
+        var b = c;
+        document.getElementById('rav2').innerHTML = c;
+    </script>
+    <p id="rav30"></p>
+    <script>
+        var b = 4;
+        b -- ;
+        var c = b ;
+        document.getElementById('rav30').innerHTML = b;
+    </script>
+
+</body>
+
+</html>

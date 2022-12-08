@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3 id="r1"></h3>
+    <hr>
+    <h3 id="r2"></h3>
+    <hr>
+    <h3 id="r3"></h3> 
+    <script>
+        var d = 231e6;
+        var c = 231e-6;
+        document.getElementById('r1').innerHTML = d + " <br>" + c;
+    </script>
+    <!-- Floating point  -->
+    <script>
+        let a = 0.2 + 0.3;
+        document.getElementById('r2').innerHTML = "0.2 + 0.3 =" + a;
+        // document.write(0.2 + 0.9+('a'));
+        let f = (0.3 * 15 + 0.5 * 15) / 10;
+        document.getElementById('r3').innerHTML = "0.3 + 0.5= " + f;
+    </script>
+    <hr>
+    <script>
+        document.write(100 / ("apple")+"<br>");
+        document.write(100/300);
+    </script>
+    <hr>
+    <script>
+        let g = 100/ "apple";
+        document.write(isNaN(g)+"<br>") ;
+
+        document.write(typeof (g));
+    </script>
+    <hr>
+    <script>
+        let p = 0xFF;
+        document.write("0xFF =" + (p));
+
+    </script>
+    <hr>
+    <!-- to string  -->
+    <p id="ra6"></p><hr>
+    <p id="ra7"></p>
+    <script>
+        let t = 204;
+        // document.write(t.toString() + "<br>") +  
+        document.getElementById('ra6').innerHTML= t.toString() +" <br>"+
+        (204).toString()+"<br>" +
+        (200 + 4).toString();
+    </script> 
+    <!-- to toExponential  method -->
+    <script>
+        let l = 2.504
+        document.getElementById('ra7').innerHTML=
+        l.toExponential()+ "<br>"+
+        l.toExponential(4)+'<br>'+
+        l.toFixed(6) +"<br>"+
+        l.toPrecision(8)   
+        ;
+
+    </script>
+
+
+</body>
+
+</html>

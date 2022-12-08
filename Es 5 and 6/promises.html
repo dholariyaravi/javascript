@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- JavaScript Promise.. files..//  -->
+    <h3 id="s5"></h3>
+      <script>
+         function mydate(num){
+            document.getElementById('s5').innerHTML = num ;
+         }
+
+         let mypromise = new Promise (function (myResolve , myReject){
+            let req = new XMLHttpRequest();
+            req.open ("GET","Async.html");
+            req.onload = function(){
+                if (req.status == 200){
+                    myResolve(req.response);
+                }else{
+                    myReject ('files not found');
+                }
+            };
+            req.send();
+         });
+
+         mypromise.then(
+            function(value) {mydate (value)},
+            function (error) { mydate (error);}   
+         );   
+      </script>
+    <hr>
+
+
+     
+
+</body>
+
+</html>

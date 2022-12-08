@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="font-size: 20px;">
+    <!-- javascript function....//// -->
+    <script>
+        function myname(a, b) {
+            return (a * b);
+        }
+        let p = myname(10, 20);
+        document.write(p);
+    </script>
+    <hr>
+    <!-- functiom Expressions...  -->
+    <script>
+        let h = function (m, n) {
+            return m * n
+        };
+        document.write(h(3, 5) * 2);
+    </script>
+    <hr>
+    <!-- anonymous self-invoking function..//  -->
+    <h3 id="p1" </h3> <script>
+        ( function (){
+        document.getElementById('p1').innerHTML = "i love javascript"
+        })();
+        </script>
+        <hr>
+        <!-- ES 6...// arrow function -->
+
+        <h2 id="p2"></h2>
+        <script>
+            const re = (v, y) => (v * y);
+            document.getElementById('p2').innerHTML = re(5, 5);
+        </script>
+        <hr>
+
+
+        <!-- JavaScript Function Parameters/////////////////////// -->
+        <script>
+            function ma(p, i = 5) {
+                return (p * i)
+            };
+            document.write(ma(9))
+        </script>
+        <hr>
+        <h3 id="p3"></h3>
+        <script>
+            function myfunction() {
+                let max = -Infinity
+                for (let i = 0; i < arguments.length; i++) {
+                    if (arguments[i] > max) {
+                        max = arguments[i];
+                    }
+                }
+                return max;
+            }
+            document.getElementById('p3').innerHTML = myfunction(2, 8, 9, 12);
+        </script>
+        <hr>
+        <h3 id="p4"></h3>
+        <script>
+            function sumoll() {
+                let sum = 0;
+                for (let r = 0; r < arguments.length; r++) {
+                    sum += arguments[r];
+                }
+                return sum;
+            }
+            document.getElementById('p4').innerHTML = sumoll(12, 18, 69, 33);
+            1
+        </script>
+
+        <!-- JavaScript Function Invocation..  -->
+        <script>
+            const obj = {
+                fname: "ravi",
+                lanme: "dholariya",
+                fullname: function () {
+                    return (this.fname + " " + this.lanme).toUpperCase();
+                }
+            }
+            document.write(obj.fullname());
+        </script>
+        <hr>
+        <h3 id="p5"></h3>
+        <script>
+            function myfunction(age, age1) {
+                this.fistname = age;
+                this.lastname = age1;
+            }
+            const n = new myfunction("ravi", "123")
+            document.getElementById('p5').innerHTML = n.fistname + " " + n.lastname;
+        </script>
+        <hr>
+
+        <!-- JavaScript Function call()..... -->
+        <h3 id="p6"></h3>
+        <script>
+            const object = {
+                name: function (city, country) {
+                    return this.fname + " " + this.lname + "," + city + "," + country;
+                }
+            }
+            const object1 = {
+                fname: "rajan",
+                lname: "kathiriya"
+            }
+
+            const object2 = {
+                fname: "ravi",
+                lname: "senjaliya"
+            }
+            document.getElementById("p6").innerHTML =
+                object.name.call(object2, "rajkot", "india");
+        </script>
+        <hr>
+
+        <!-- JavaScript Function apply()....// -->
+        <h3 id="p7"></h3>
+        <script>
+            const ob = {
+                fullname: function (name, country) {
+                    return this.firstanme + " " + this.lastname + "," + name + "," + country;
+                }
+            }
+
+            const ob1 = {
+                firstanme: "milan",
+                lastname: "senjaliya"
+            }
+            document.getElementById('p7').innerHTML =
+                ob.fullname.apply(ob1, ["jetpur", 'india']);
+        </script>
+        <h3 id="p8"></h3>
+        <h3 id="p9"></h3>
+        <script>
+            document.getElementById('p8').innerHTML = Math.max(1, 5, 9, 3);
+            document.getElementById('p9').innerHTML = Math.min(5, 9, 3);
+        </script>
+        <hr>
+
+        <!-- JavaScript Function bind()......//  -->
+        <h3 id="l1"></h3>
+        <script>
+            const objname = {
+                fname: "ravi",
+                lname: "dholariya",
+                fullname: function () {
+                    return this.fname + " " + this.lname;
+                }
+            };
+            const ne = {
+                fname: "trushal",
+                lname: "dholariya"
+            }
+            let fullname1 = objname.fullname.bind(ne);
+
+            document.getElementById('l1').innerHTML = fullname1();
+        </script>
+        <hr>
+        <h3 id="l2"></h3>
+        <script>
+            const obj1 = {
+                fname: "ravi",
+                lname: "dholariya",
+                fullname: function () {
+                    let z = document.getElementById('l2');
+                    z.innerHTML = this.fname + " " + this.lname;
+                }
+            }
+            let person = obj1.fullname.bind(obj1);
+            setTimeout(person, 3000);
+        </script>
+        <hr>
+
+        <!-- JavaScript Closures............///  -->
+
+        <!-- k local\ Variables../  -->
+        <script>
+            function myfunction() {
+                let k = 4 * 5;
+                document.write(k * k);
+            }
+            myfunction();
+        </script>
+        <hr>
+        <!-- l global Variables...  -->
+        <script>
+            let l = 5
+            myfunction();
+            function myfunction(){
+                document.write(l * l);
+            }
+        </script>
+
+        <hr>
+        <script>
+            let total = 0;
+             
+            function add(){
+                total += 1 ;
+            }
+            add();
+            add();
+            add();
+            add();
+            add();
+            document.write(total);
+        </script>
+        <hr>
+        <script>
+            document.write(myfunction());
+            function myfunction (){
+                let kaa = 0 ;
+                function plus() {kaa += 2};
+                plus();
+                return kaa ;
+            }
+        </script>
+        <hr>
+        <button type="button" onclick="myfunction()">click</button>
+        <h3 id="l4">0</h3>
+        <script>
+            const name = (function () {
+                let countar = 0;
+                return function () {countar += 1 ; return countar }
+            }) ();
+
+            function myfunction(){
+                document.getElementById('l4').innerHTML = name();
+            }
+
+        </script>
+
+
+
+
+</body>
+
+</html>

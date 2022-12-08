@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>hello word</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis provident 
+        harum consequunturdeserunt nam sequi, ullam impedit! 
+        Consequatur praesentium repellat, repellendus nisi, maxime corrupti nihil odit,
+         doloremque officiis sunt nam?</p>
+          
+         <img src="/images/ravi1.jpeg" alt="" width="200px">
+         <hr>
+         <!-- ...................////////////////////////////............................. -->
+
+    <h3 id="a1"></h3>
+    <script>
+        class car {
+            constructor(name, year) {
+                this.name1 = name;
+                this.year1 = year;
+            }
+        }
+        const data = new car("audi", "2003");
+        document.getElementById('a1').innerHTML =
+            data.name1 + " " + data.year1;
+    </script>
+    <hr>
+    <h3 id="a2"></h3>
+    <script>
+        class newd {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+            age() {
+                let mmm = new Date();
+                return mmm.getFullYear() - this.year;
+            }
+        }
+        let naa = new newd("ravi", 2012);
+        document.getElementById('a2').innerHTML =
+            "my age is" + naa.age();
+    </script>
+    <hr>
+    <h3 id="a3"></h3>
+    <script>
+        class saa {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+            age(p) {
+                return p - this.year;
+            }
+        }
+        let gg1 = new Date();
+        let gg2 = gg1.getFullYear();
+
+        let haa = new saa("BMW", 2002);
+        document.getElementById('a3').innerHTML =
+            "my age is" + haa.age(gg2);
+    </script>
+    <hr>
+    <!-- JavaScript Class Inheritance... //  -->
+    <script>
+        class nam {
+            constructor(aeee) {
+                this.craname = aeee;
+            }
+            nrr() {
+                return "i am a fullstack devlopar" + this.craname;
+            }
+        }
+
+        class modan extends nam {
+            constructor(aeee, mmm) {
+                super(aeee),
+                    this.modan = mmm;
+            }
+            haae() {
+                return this.nrr() + " my website" + this.modan;
+            }
+        }
+        let ok = new modan("  and this is ", " in a new");
+        document.getElementById('a3').innerHTML =
+            ok.haae();
+    </script>
+
+    <script>
+        class mm {
+            constructor(name) {
+                this.newcar = name
+            }
+            get() {
+                return this.newcar;
+            }
+            set(p) {
+                this.newcar = p;
+            }
+        }
+        let maa = new mm("navebar");
+        maa.newcar = 'volvo';
+        document.write(maa.newcar);
+    </script>
+    <hr> 
+   
+    <!-- JavaScript Static Methods.....  -->
+    <h3 id="k1"></h3>
+    <script>
+        class car1  {
+            constructor (name){
+              this.name = name ;  
+            }
+          static hello(s){
+                return "hello" + s.name;
+            }
+        }
+        let mla =  new car1 (' name is ravi');
+        
+        document.getElementById('k1').innerHTML = car1.hello(mla);
+    </script>
+    <hr>
+
+
+
+
+</body>
+
+</html>

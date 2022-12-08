@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="font-size: 20px">
+
+    <h1 style="color: brown; text-align: center;">task oll...</h1>
+    <!-- Create any program as you like to do with mouseover and mouse out event...  -->
+
+    <h2> 1) mouseover and mouse out => 3</h2>
+    <div onmouseover="myseover(this)" ; onmouseout="myseout(this)" ; style="background-color: rgb(162, 150, 134); width: 75px;
+  height: 40px; padding: 45px; text-align: center; font-size: 23px;">welcome</div>
+
+    <script>
+        function myseover(ok) {
+            ok.innerHTML = "mouseover";
+            ok.style.backgroundColor = "darkcyan";
+        }
+
+        function myseout(ok) {
+            ok.innerHTML = "mouse out";
+            ok.style.backgroundColor = "#D94A38";;
+        }
+    </script>
+    <hr>
+    <!-- ================================================================== -->
+
+    <!--Reverse array using JavaScript => 5 -->
+    <h2> 2) reverse array => 5</h2>
+    <h4 id="a1"></h4>
+    <h4 id="a2"></h4>
+    <script>
+        const reve = ([12, 34, 56, 78]);
+        document.getElementById('a1').innerHTML = reve;
+        reve.reverse();
+        document.getElementById('a2').innerHTML = reve;
+    </script>
+    <hr>
+    <!-- 6. Make two array and concate it.   -->
+    <h2> 3) concate .....</h2>
+    <script>
+        const arr1 = [14, 24, 56, 46];
+        const aar2 = [90, 78, 56, 45, 34];
+        let total = arr1.concat(aar2);
+        document.write(total);
+    </script>
+    <hr>
+
+    <!-- 7.Insert one element in last in array and delete one element in array from last..  -->
+    <h2> 4) delete and aad element.....</h2>
+    <h3 id="a3"></h3>
+    <h3 id="a4"></h3>
+    <script>
+        const arr3 = ['ravi', 'rajan', 'milan', 'darshit'];
+        document.getElementById('a3').innerHTML = arr3;
+        arr3.push("jay");
+        arr3.shift(0);
+
+        document.getElementById('a4').innerHTML = arr3;
+    </script>
+    <hr>
+    <!-- 8. Export data from other file and import it to your own file.. 
+        (Data : first name , last name ,age, city) -->
+    <!-- js filename:= ("./task2 oll.js") -->
+
+    <h2>5)Export data and import data</h2>
+    <h3 id="a5"></h3>
+    <script type="module">
+        import mess from "./task2 oll.js";
+
+          document.getElementById('a5').innerHTML = mess();
+           
+        </script>
+    <hr>
+
+    <!-- 9. Fetch data from text file with using xmlHttpRequest(make your own text file) -->
+    <!-- file name := (text oll.js) -->
+    <h2> 6)xmlHttpRequest text file</h2>
+    <h4 id="a6"></h4>
+    <script>
+        const text = new XMLHttpRequest();
+        text.onload = function () {
+            document.getElementById('a6').innerHTML =
+                this.responseText;
+        }
+        text.open("GET", "text.html");
+        text.send();
+    </script>
+    <hr>
+
+    <!-- Get json file and convert into object (json file is given below example 1) -->
+    <!-- file nmae:= "task4.json" -->
+
+    <h2>7)json file convert into object</h2>
+    <h3 id="a7"></h3>
+    <script>
+        const obj = new XMLHttpRequest();
+        obj.onload = function () {
+            let da = JSON.parse(this.responseText);
+            document.getElementById('a7').innerHTML = "fruit-" + da.fruit +
+                "<br> size-" + da.size + "<br>color-" + da.color;
+        }
+
+        obj.open("GET", "task4.json");
+        obj.send();
+    </script>
+    <hr>
+
+    <!-- Display confirmation box using JavaScript  -->
+    <h2 id="a8"></h2>
+
+    <h2> 8)Click button confirmation box</h2>
+    <button type="button" onclick="conf()">button</button>
+    <script>
+        function conf() {
+            let use = confirm('Do you want to continue?');
+            if (use == true) {
+                document.write("User wants to continue!");
+                return true;
+            } else {
+                document.write('User does not want to continue!');
+                return false;
+            }
+        }
+    </script>
+    <hr>
+    <!-- Display prompt box using JavaScript ....  -->
+    <h2>9)Click button prompt box</h2>
+
+    <button type="button" onclick="myfunction()">button</button>
+    <h2 id="a9"></h2>
+    <script>
+        function myfunction() {
+            let person = prompt("Please enter your name ", " ");
+            if (person != null) {
+                document.getElementById('a9').innerHTML =
+                    "hello " + person + " How are you today? ";
+            }
+        }
+    </script>
+    <hr>
+    <!--Make simple tic tac toe game using JavaScript (you can follow any YouTube video)-->
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

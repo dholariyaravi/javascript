@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2 id="a1"></h2>
+    <script>
+        const person = {
+            fnmae: 'ravi',
+            lnmae: 'dholariya',
+            id: 453647,
+            fulnmae: function () {
+                return this.fnmae + " " + this.lnmae;
+            }
+        }
+
+        document.getElementById('a1').innerHTML = person.fulnmae();
+    </script>
+
+    <hr>
+    <!-- this in Event Handlers... remov  -->
+    <button onclick="this.style.display='none' ">click me to remove</button>
+    <hr>
+
+    <!-- call.....  -->
+    <h2 id="a2"></h2>
+
+    <script>
+        const name = {
+            Newname: function () {
+                return this.fnmae1 + " " + this.lnmae2;
+            }
+        }
+
+        let person2 = {
+            fnmae1: 'rajan',
+            lnmae2: 'kathiriya',
+        }
+
+        let u = name.Newname.call(person2);
+        document.getElementById('a2').innerHTML = u;
+    </script>
+
+    <!-- bind.....  -->
+    <hr>
+
+    <h3 id="a3"></h3>
+
+    <script>
+        const kem = {
+            fname: 'trushal',
+            lname: 'dholariya',
+            age: 19,
+            id: function () {
+                return this.fname + " " + this.lname;
+            }
+        }
+
+        let kem1 = {
+            fname: 'milan',
+            lname: 'senjaliya',
+        }
+
+        let id = kem.id.bind(kem1);
+        document.getElementById('a3').innerHTML = id();
+    </script>
+
+
+</body>
+
+</html>

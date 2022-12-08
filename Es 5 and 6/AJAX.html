@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="m1">
+        <h2>change this text</h2>
+        <button type="button" onclick="btt()">click me</button>
+    </div>
+    <script>
+        function btt() {
+            const obj = new XMLHttpRequest();
+            obj.onload = function () {
+                document.getElementById("m1").innerHTML = this.responseText;
+            }
+            obj.open("GET", "javascript/ajax.js");
+            obj.send();
+        }
+    </script>
+
+    <!-- AJAX - The XMLHttpRequest Object....  -->
+    <hr>
+    <div id="m2">
+        <button type="button" onclick="onredi()">click me</button>
+    </div>
+    <script>
+        function onredi() {
+            const onre = new XMLHttpRequest();
+            onre.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("m2").innerHTML =
+                        this.responseText;
+                }
+            }
+            onre.open("GET", "javascript/ajax.js");
+            onre.send();
+        }
+    </script>
+    <hr>
+    <!-- AJAX - XMLHttpRequest....   -->
+    <h2 id="m3"></h2>
+    <button type="button" onclick="chenj()">click button</button>
+    <script>
+        function chenj() {
+            const has = new XMLHttpRequest();
+            has.open("GET", "javascript/ajax.js", false);
+            has.send();
+            document.getElementById('m3').innerHTML = has.responseText;
+        }
+    </script>
+    <!-- AJAX - Server Response...  -->
+    <hr>
+    <hr>
+    <!-- ============================================  -->
+    <!-- AJAX PHP ...  -->
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

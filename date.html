@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="font-size: 20px; text-align: center; ">
+        <h2 id="r1"></h2>
+        <script>
+            const da = new Date();
+            document.getElementById('r1').innerHTML = da;
+        </script>
+        <script>
+            const d1 = new Date();
+            document.write(d1.toString());
+        </script>
+        <hr>
+        <h2 id="r2"></h2>
+        <!-- toDateString   -->
+        <script>
+            const d2 = new Date();
+            document.getElementById('r2').innerHTML = d2.toDateString();
+        </script>
+        <hr>
+        <h2 id="r3"></h2>
+        <script>
+            const d3 = new Date(2003, 0, 26, 22, 35, 5);
+            document.getElementById('r3').innerHTML = d3;
+        </script>
+        <hr>
+        <!-- Get Date....  -->
+        <script>
+            const e1 = new Date();
+            document.write(e1.getFullYear());
+        </script>
+        <h2 id="r4"></h2>
+        <script>
+            const e2 = new Date();
+            document.getElementById('r4').innerHTML = e2.getMonth() + 1;
+        </script>
+
+        <h2 id="r5"></h2>
+        <script>
+            const e3 = new Date();
+            document.getElementById('r5').innerHTML = e3.getDate();
+        </script>
+        <h2 id="r6"></h2>
+        <script>
+            const e4 = Date();
+            document.getElementById('r6').innerHTML = e2.getHours();
+        </script>
+        <h2 id="r7"></h2>
+        <script>
+            const e5 = new Date();
+            document.getElementById('r7').innerHTML = e2.getMinutes();
+        </script>
+
+        <script>
+            const e6 = Date();
+            document.write(e6.getSeconds());
+        </script>
+        <h2 id="r8"></h2>
+        <script>
+            const e7 = Date();
+            document.getElementById('r8').innerHTML = e2.getMilliseconds();
+        </script>
+        <hr>
+        <h2 id="r9"></h2>
+        <script>
+            const e8 = new Date();
+            document.getElementById('r9').innerHTML = e2.getTime();
+            document.write(e8.getTime());
+        </script>
+        <hr>
+        <script>
+            const e9 = new Date();
+            document.write(e9.getDay());
+        </script>
+        <hr>
+
+        <!-- set Date ...  -->
+        <h3 id="w1"></h3>
+        <script>
+            const r1 = new Date();
+            r1.setFullYear(2022);
+            document.getElementById('w1').innerHTML = r1;
+        </script>
+        <script>
+            const r2 = new Date();
+            r2.setHours(23);
+            document.write(r2);
+        </script>
+        <hr>
+        <script>
+            const r3 = new Date();
+            r3.setDate(17);
+            document.write(r3);
+        </script>
+        <br>
+        <script>
+            const r4 = new Date();
+            r4.setFullYear(2022, 8, 28);
+            document.write(r4);
+        </script>
+        <hr>
+        <script>
+            const r5 = new Date()
+            r5.setMinutes(55);
+            document.write(r5);
+        </script>
+        <br>
+        <script>
+            const r6 = new Date();
+            r6.setMonth(11);
+            document.write(r6);
+        </script>
+        <hr>
+
+        <h2 id="de1"></h2>
+
+        <script>
+            let = text1;
+            const day = new Date();
+            const oneday = new Date();
+            oneday.setFullYear(2100, 0, 14);
+
+            if (oneday > day) {
+                text1 = "Today1Today1 is before January 14, 2100.";
+            } else {
+                text1 = "Today is after January 14, 2100.";
+            }
+
+            document.getElementById('de1').innerHTML = text1;
+        </script>
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>

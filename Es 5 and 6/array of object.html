@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-size: 20px;">
+    <h5 id="de1"></h5>
+    <script>
+        let my = " ";
+        const obj = {
+            name: 'ravi',
+            age : 20,
+            cars: [
+                {name :'oudi', models:["340","x8","pl2"]},
+                { name :'BMW', models :[ "902","u2", "lo12"]},
+                {name : 'KIv', models : ['734',"new12","zxl"]}
+            ]
+        }
+        for (let m in obj.cars){
+            my +=  "<h1>"+ obj.cars[m].name +"<h2/>";
+          for ( let z in obj .cars [m].models) {
+            my +=  obj.cars[m].models [z]  +"<br>" ;
+          }
+        }
+
+        document.getElementById('de1').innerHTML = my ;
+    </script>
+    <hr>
+    <!--  2 nested object .////  -->
+    
+    <h3 id="de2"> </h3>
+
+    <script>
+    let objk = {
+        name :  "ravi",
+        age : "19",
+        clat :{
+            cla :3663 ,
+            cla2 : 'ravi dholariya ',
+            cla3 : 1424 ,
+        }
+    };
+    document.getElementById('de2').innerHTML = objk.clat.cla ;
+    </script>
+    <h3 id="ra3"></h3>
+    <script>
+        const nested = {
+            name :'new name' ,
+            cars :{
+              car1 : 'BMW',
+              car2 : "Audi",
+              car3 : "KVi"
+            }
+        }
+        document.getElementById('ra3').innerHTML = JSON.stringify(nested.cars) ;
+        
+    </script>
+    <hr>
+
+    <!--  3 toUpperCase..... width object...  -->
+    <h3 id="de3"></h3>
+    <script>
+        const ob = {
+        name : "ravi",
+        age : 20,
+        class :' f-12',
+        };
+
+        ob.person = function(){
+            return (this.name        + " "+ this.class).toUpperCase();
+        };
+       document.getElementById('de3').innerHTML = 
+          "my name"  + ob.person ()  + "in my class";
+    </script>
+    <hr>
+    <!-- 4 object using the loop...   -->
+    <h3 id="de4"></h3>
+    <script>
+        const newobj = {
+            car : "OUdi",
+            car1 : "KVI",
+            car2 : " BMW"
+        }
+        let met = " ";
+        for (let p in newobj){
+            met += newobj[p] + " ,";   
+        }
+        document.getElementById('de4').innerHTML = met ;
+    </script>
+   <!-- add property and delet ....  -->
+    <hr>
+    <h3 id="de5"></h3>
+    <script>
+        const name1 = {
+            name : 'rajan', 
+            class :  "F -10",
+        }
+        delete name1.name ;
+        name1. person = "24" ,
+        
+        document.getElementById('de5').innerHTML = 
+          "  name is " + name1.name  +  "   age is" + name1.person ;
+
+    </script>
+     <!-- convert object in string to stringify .....//  -->
+     <hr>
+     <script>
+        const myobj = {
+          Fname : 'ravi',
+          Lname : "dholariya",
+          age  : 20 ,  
+
+        }
+        document.write(JSON.stringify (myobj));
+     </script>
+
+    
+</body>
+</html>

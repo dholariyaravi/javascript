@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- looping over string.... / -->
+
+    <h1 id="r1"></h1>
+    <script>
+        const nam = " javascripat";
+
+        let text1 = " ";
+        for (let y of nam) {
+            text1 += y + '<br>';
+        }
+        document.getElementById('r1').innerHTML = text1;
+    </script>
+    <hr>
+    <!-- looping over array...../  -->
+    <h2 id="r2"></h2>
+    <script>
+        const Name = ['ravi', 'rajan', 'milan'];
+
+        let text = " ";
+        for (let u of Name) {
+            text += u + '<br>';
+        }
+        document.getElementById('r2').innerHTML = text;
+    </script>
+    <!-- javascri while loop ...... / ==================================== -->
+    <h2 id="r3"></h2>
+    <script>
+        let rav = " ";
+        let t = 0;
+        while (t <= 15) {
+            rav += t + '<br>';
+            t++;
+        }
+        document.getElementById('r3').innerHTML = rav;
+    </script>
+    <hr>
+    <h3 id="r4"></h3>
+    <script>
+        let date = " ";
+        let a = 10;
+        while (a < 18) {
+            if (a === 14) {
+                break;
+            }
+            date += a + '<br>';
+            a++;
+        }
+        document.getElementById('r4').innerHTML = date;
+    </script>
+    <!-- the Do while loop...... / -->
+    <!-- pela  value prinat kare pachi condisan chekare.....  -->
+
+    <h3 id="r5"></h3>
+    <script>
+        let text2 = " ";
+        let s = 0;
+
+        do {
+            text2 += "  <br> the number is " + s;
+            s++;
+        }
+        while (s <= 10);
+
+        document.getElementById('r5').innerHTML = text2;
+    </script>
+    <hr>
+    <!-- Comparing For and While......  -->
+    <h1 id="r6"></h1>
+    <script>
+        const ra = ['ravi', 'milan', 'rajan'];
+
+        let name4 = " ";
+        let c = 0;
+        for (; ra[c];) {
+            name4 += ra[c] + '<br>';
+            c++;
+        }
+        document.write(name4);
+    </script>
+    <hr>
+    <script>
+        const gg = [12, 34, 5, 67, 88, 556, 56];
+
+        let na1 = ' ';
+        let p = 0;
+
+        while (gg[p]) {
+            na1 += gg[p] + '<br>';
+            p++;
+        }
+        document.write(na1);
+    </script>
+    <hr>
+    <!-- break....////// =======++++++#########//////.....  -->
+
+    <script>
+        let text4 = " ";
+        for (let h = 0; h <= 99; h++) {
+            if (h == 35) {
+                break
+            };
+            if (h === 10) {
+                continue
+            };
+            text4 += h;
+        }
+        document.write(text4);
+    </script>
+    <!-- loop which will skip the step where...  -->
+    <hr>
+    <script>
+        let haa = " ";
+        for (let n = 0; n < 15; n++) {
+            if (n == 12) {
+                break
+            };
+            if (n === 9) {
+                continue
+            };
+            haa += n + '<br>';
+        }
+        document.write(haa);
+    </script>
+
+    <!-- Iterating Over a String..... ///  -->
+
+    <h2 id="d1"></h2>
+    <script>
+        const java =['javascript']
+
+        let scrip = " ";
+        for (let h of java){
+            scrip += h ;
+        }
+        document.getElementById('d1').innerHTML = scrip ;
+
+    </script>
+    <hr>
+    <h3 id="d2"></h3>
+    <script>
+    
+    const fruits = ([
+        ['mango', 5],
+        ['apple', 20],
+        ['banana',30], 
+    ]);
+
+    let fru1 = " ";
+    for ( let t of fruits){
+        fru1 += t + '<br>';
+    }
+    document.getElementById('d2').innerHTML = fru1 ;
+    </script>
+
+
+
+</body>
+
+</html>

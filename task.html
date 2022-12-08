@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        firstname ; <br>
+        <input type="text" name="" id="text1">
+        <br>
+        second ;<br>
+        <input type="text" name="" id="text2">
+        <br>
+        result ; <br>
+        <input type="text" name="" id="text3">''
+        <br>
+        <input type="button" name="" value="result" onclick="rajan1()">
+     
+    </div>
+
+    <script>
+        function rajan1(){
+            var c1 = parseInt (document.getElementById ('text1').value);
+            var c2 = parseInt (document.getElementById ('text2').value);
+            var sum = c1 + c2;
+
+            document.getElementById('text3').value = sum;
+            console.log(sum);
+        }
+       
+    </script> <br> <br>
+
+    <div>
+        name ; <br>
+        <input type="text" name="" id="ra1"> 
+        <br>
+        second name ;<br>
+        <input type="text" name="" id="ra2">
+        <br>
+        resuli ;<br>
+        <input type="text" name="" id="ra3"> <br> 
+        <br>
+
+        <input type="button" value="click me" onclick="ravi()">
+    </div>
+
+    <script>   
+        function ravi(){
+        var _a = parseInt (document.getElementById ('ra1').value);
+        var _b = parseInt (document.getElementById ('ra2').value);
+        var sum = _a + _b;
+        document.getElementById(ra3).value = sum;
+    }
+    </script>
+    
+</body>
+</html>

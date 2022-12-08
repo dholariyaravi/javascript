@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="demo"></h1>
+    <hr>
+    <h2 id="demo1"></h2>
+    <hr>
+    <h2 id="demo2"></h2>
+    <hr>
+    <h2 id="demo3"></h2>
+    <hr>
+    <h2 id="demo4"></h2>
+    <hr>
+
+    <script>
+        let ravi = 'ravi dholariya';
+        document.getElementById('demo').innerHTML = ravi.length;
+    </script>
+    <script>
+        var raj = 'j\'avascript\\ \'css\'  html\"';
+
+        document.getElementById('demo1').innerHTML = raj;
+    </script>
+    <script>
+        document.getElementById('demo2').innerHTML = "hello \
+        worad";
+    </script>
+
+    <script>
+        let x = 20;
+        let y = new String('ravi');
+        document.getElementById('demo3').innerHTML =
+            typeof x + " <br>" + typeof y;
+    </script>
+    <script>
+        let a = "ravi";
+        let b = new String('ravi');
+        document.getElementById('demo4').innerHTML = (a == b);
+    </script>
+    <!-- ============================================================================================================= -->
+
+    <h1 id="ra1"></h1>
+    <hr>
+    <h1 id="ra22"></h1>
+    <hr>
+    <h1 id="ra3"></h1>
+    <h2 id="ra4"></h2>
+    <hr>
+    <h3 id="ra5"></h3>
+
+
+
+    <script>
+        // slice 
+        let rajan = "apple, banana, mego";
+        document.getElementById('ra1').innerHTML = rajan.slice(6, 12);
+    </script>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+
+    <!-- substring  -->
+    <script>
+        let meet = "ravi,rajan,milan";
+        document.getElementById('ra22').innerHTML = meet.substring(5, 16);
+    </script>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <script>
+        let milan = "volvo,audio,maruti";
+
+        document.getElementById('ra3').innerHTML = milan.substr(5, 8)
+    </script>
+    <script>
+        let gg1 = " volvo,audio,maruti";
+        document.getElementById('ra4').innerHTML = gg1.substr(-6)
+    </script>
+    <!-- -------------------------------------------------------------------------------------------------- -->
+    <!-- replacing string content -->
+    <button onclick="room1 ()">click </button>
+
+    <h3 id="tt1">ravi dholariya</h3>
+    <script>
+        function room1() {
+            let text = document.getElementById('tt1').innerHTML;
+            document.getElementById('tt1').innerHTML =
+                text.replace('dholariya', 'senjaliya');
+        }
+    </script>
+    <hr>
+    <!-- ----------------------------------------------------------------------- -->
+    <button onclick="room2()">click</button>
+    <h3 id="tt2">apple banana apple</h3>
+    <script>
+        function room2() {
+            let ravi = document.getElementById('tt2').innerHTML;
+            document.getElementById('tt2').innerHTML =
+                ravi.replace(/apple/g, 'w3school');
+        }
+    </script>
+    <hr>
+    <!-- ============================================================================================ -->
+    <button onclick="room3()">click</button>
+    <h3 id="tt3">hello worad</h3>
+    <script>
+        function room3() {
+            var ravi = document.getElementById('tt3').innerHTML;
+            document.getElementById('tt3').innerHTML =
+                ravi.toLocaleUpperCase();
+        }
+    </script>
+    <!-- ----------------------------------------------------------------------------------  -->
+    <button onclick="room4()">click</button>
+    <h1 id="tt4">HELLO WORAD</h1>
+
+    <script>
+        function room4() {
+            var ravi1 = document.getElementById('tt4').innerHTML;
+            document.getElementById('tt4').innerHTML =
+                ravi1.toLocaleLowerCase();
+        }
+    </script>
+    <hr>
+    <!-- ============================================================================================================= -->
+    <!-- concat  -->
+    <h3 id="yy1"></h3>
+    <script>
+        let ra = "hello";
+        let ra1 = "world";
+        let ra2 = ra.concat(" ", ra1);
+        document.getElementById('yy1').innerHTML = ra2;
+    </script>
+    <!-- trmi () -->
+    <p id="yy2"></p>
+    <script>
+        let tru = "          hello world";
+        let tru1 = tru.trim();
+
+        document.getElementById('yy2').innerHTML =
+            "text=" + tru.length + "<br> text=" + tru1, length;
+    </script>
+    <hr>
+    <!-- ========================================================================================================================== -->
+    <!-- padiing  -->
+    <h3 id="uu1"></h3>
+    <h3 id="uu21"></h3>
+    <h3 id="r1"></h3>
+    <script>
+        let gaa = "6";
+        document.getElementById('uu1').innerHTML = gaa.padStart(5, "r");
+    </script>
+    <!-- <script>
+        let raj = "5";
+        document.getElementById('uu21').innerHTML = raj.padEnd (4,"d");
+    </script> -->
+    <script>
+        let grr = "6";
+        document.getElementById('r1').innerHTML = grr.padEnd(5, "r");
+    </script>
+    <hr>
+    <!-- ========================================================================================================== -->
+    <!-- charAt ()  -->
+    <h2 id="demo6"></h2>
+    <h2 id="demo7"></h2>
+    <script>
+        let text = "ravi dholariya";
+        document.getElementById('demo6').innerHTML = text.charAt(2);
+    </script>
+    <script>
+        let text1 = "hello worad";
+        document.getElementById('demo7').innerHTML = text1.charCodeAt(1);
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Throw, and Try...Catch...Finally................  -->
+    
+    <h2 id="r1"></h2>
+    <script>
+        try {
+            rvai('not a rajan');
+        } catch (ra) {
+            document.getElementById('r1').innerHTML = ra.message;
+        }
+    </script>
+    <hr>
+    <!-- Input Validation.....  -->
+
+    <input id="r2" type="text">
+    <button type="button" onclick="myfunction1()">click me</button>
+    <h3 id="r3"></h3>
+
+    <script>
+        function myfunction1() {
+            const name = document.getElementById('r3');
+            name.innerHTML = "";
+            let l = document.getElementById('r2').value;
+            try {
+                if (l == "") throw 'not a';
+                if (isNaN(l)) throw 'not a number';
+                l = Number(l);
+                if (l < 20) throw 'low number';
+                if (l > 100) throw 'high number';
+            } catch (tra) {
+                name.innerHTML = 'this is ' + tra;
+            } 
+            finally{
+                document.getElementById('r3').value = ' ';
+            }
+
+        }
+    </script>
+
+
+</body>
+
+</html>

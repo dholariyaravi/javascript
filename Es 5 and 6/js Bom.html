@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- JavaScript Window..... /////  -->
+    <h3 id="d1"></h3>
+    <script>
+        document.getElementById("d1").innerHTML =
+            "width" + window.innerWidth + "px<br>" +
+            "height" + window.innerHeight + "px <br>" +
+            "screen" + screen.width + "<br>" +
+            "scrren high" + screen.height + "<br>" +
+            "scrren color" + screen.colorDepth;
+    </script>
+    <!-- Window Location..... //  -->
+    <h3 id="d2"></h3>
+    <script>
+        document.getElementById('d2').innerHTML =
+            " page location = " + window.location.href + "<br>" +
+            " page path is = " + window.location.pathname
+    </script>
+    <hr>
+    <!-- whhh new ....  -->
+    <input type="button" value="onclick" onclick="butt()">
+
+    <script>
+        function butt() {
+            window.location.assign("https://www.boat-lifestyle.com/")
+        }
+    </script>
+    <!-- Window History....  -->
+    <hr>
+    <input type="button" value="button" onclick="onchej()">
+
+    <script>
+        function onchej() {
+            window.history.back();
+        }
+    </script>
+    <hr>
+    <!-- js Window Navigator....... //  -->
+    <h4 id="d3"></h4>
+    <script>
+        document.getElementById('d3').innerHTML =
+            navigator.appName;
+    </script>
+    <hr>
+    <h3 id="d4"></h3>
+    <script>
+        document.getElementById('d4').innerHTML = "app version =:  " + navigator.appVersion;
+    </script>
+    <!-- js Popup Boxes....  -->
+    <hr>
+
+    <button type="button" onclick="myfunction()">click me</button>
+    <h2 id="d5"></h2>
+    <script>
+        function myfunction() {
+            let text;
+            if (confirm('press a button')) {
+                text = "you are ok"
+            } else {
+                text = "yoy are cancel!"
+            }
+            document.getElementById('d5').innerHTML = text;
+        }
+    </script>
+    <hr>
+    <button onclick="myfunction()">click me</button>
+    <h2 id="d6"></h2>
+    <script>
+        function myfunction() {
+            let text;
+            let mar = prompt("plese entar your name:", "");
+            if (mar == null || mar == "") {
+                text = "your cancel from";
+            } else {
+                text = "    hello " + mar + " How are yoy to day?";
+            }
+            document.getElementById('d6').innerHTML = text;
+        }
+    </script>
+    <hr>
+    <button onclick="alert ('Hello\n How are\n you?')">click </button>
+    <hr>
+
+    <!-- JavaScript Timing Events....  -->
+    <button onclick=" myna = setTimeout (myfunction ,2000)">click me</button>
+
+    <button onclick="clearTimeout(myna)">stop </button>
+
+    <script>
+        function myfunction() {
+            alert("hello ");
+        }
+    </script>
+    <hr>
+    <h2 id="d7"></h2>
+    <script>
+    setInterval(inter, 1000);
+
+        function inter() {
+            let p = new Date ();
+            document.getElementById('d7').innerHTML = p.toLocaleTimeString();
+        }
+    </script>
+    <hr>
+    <!-- stop button..  -->
+
+    <h2 id="d8"></h2>
+    <button onclick="clearInterval(nass)">Stop</button>
+    <script>
+        let nass = setInterval (myin, 1000);
+        function myin(){
+            let h = new Date();
+            document.getElementById('d8').innerHTML = h.toLocaleTimeString();
+        }
+    </script>
+    <!-- JavaScript Cookies....  ***  -->
+
+
+</body>
+
+</html>

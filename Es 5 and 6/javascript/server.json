@@ -1,0 +1,9 @@
+{
+    "name":"rajan",
+    "age" : "20",
+    "lname":[
+        {"cars":"Audi" ,"modal":"fx32"},
+        {"cars":"BMW" ,"modal":"xx22"},
+        {"cars":"KIV" ,"modal":"lx45"}
+    ]
+}

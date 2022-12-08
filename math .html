@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1"></h1>
+    <script>
+        document.getElementById('h1').innerHTML = Math.PI;
+    </script>
+    <hr>
+    <!-- round...  -->
+    <script>
+        document.write(Math.round(4.5));
+    </script>
+    <!-- ceil..  up value -->
+    <script>
+        document.write(Math.ceil(4.1));
+    </script>
+    <script>
+        document.write(Math.floor(4.8));
+    </script>
+    <hr>
+    <!-- trunc... point pachad ni value nay ganay  -->
+    <script>
+        document.write(Math.trunc(4.8));
+    </script>
+    <!-- sign... jopoji tiv hoy to 1 nakat -1 aave  -->
+    <script>
+        document.write(Math.sign(-4.8));
+    </script>
+    <!-- powor ...  -->
+
+    <script>
+        document.write(Math.pow(4, 3));
+    </script>
+    <hr>
+    <!-- sqrt...value   -->
+    <script>
+        document.write(Math.sqrt(16));
+    </script>
+
+    <script>
+        document.write(Math.abs(-4.9));
+    </script>
+    <hr>
+    <script>
+        document.write(Math.min(100, 34, 56, 56, 22. - 132, -6));
+    </script>
+
+    <script>
+        document.write(Math.max(10, 34, 56, 98, 22. - 132, -6));
+    </script>
+    <hr>
+    <script>
+        document.write(Math.random());
+    </script>
+    <hr>
+    <script>
+        document.write(Math.log10(1000));
+    </script>
+    <hr>
+    <script>
+        document.write(Math.log(3));
+    </script>
+
+    <!-- ====================================================================================== -->
+
+    <!-- js random.....  -->
+    <h2 id="r1"></h2>
+    <script>
+        document.getElementById('r1').innerHTML = Math.floor(Math.random() * 10);
+    </script>
+    <hr>
+    <h2 id="r2"></h2>
+    <script>
+        document.getElementById('r2').innerHTML = Math.floor(Math.random() * 10) + 1;
+    </script>
+    <hr>
+
+    <button onclick="document.getElementById('r4').innerHTML = myfunaction (0,100)">click </button>
+    <h2 id="r4"></h2>
+
+    <script>
+        function myfunaction(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+    </script>
+    <hr>
+    <button onclick="document.getElementById('r5').innerHTML = myfunaction1 ( 0 ,10)">click me</button>
+    <h2 id="r5"></h2>
+    <script>
+        function myfunaction1(min, max) {
+           return Math.floor (Math.random () * (max - min + 1) ) + min;
+        }
+    </script>
+
+    <!-- js Booleans....  -->
+        <h3 id="r6"></h3>
+    <script>
+        let t = false ;
+
+        let i = new Boolean (false);
+
+        document.getElementById('r6').innerHTML = typeof  t +" <br> " + typeof i ;
+    </script>
+    <hr>
+    <script>
+        document.write( 10 > 9);
+    </script>
+    <hr>
+
+<!-- Comparison .......  -->
+<input  id="age" value="11" />
+
+<button onclick="myfunaction()">click me</button>
+
+<h3 id="r7"></h3>
+
+<script>
+
+    function myfunaction (){
+    let age = document.getElementById ('age').value ;
+    let date = (age < 18 ) ? "to one 111": " 22 tow";
+    document.getElementById('r7').innerHTML = date ;
+
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

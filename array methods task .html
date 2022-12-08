@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="aa1"></h1>
+    <h2 id="aa2"></h2>
+    <script>
+        const name =['ravi','rajan','milan',];
+        document.getElementById('aa1').innerHTML=name;
+        name.push('darshit');
+        document.getElementById('aa2').innerHTML=name;
+    </script>
+    <hr>
+    <!-- =====================================================  -->
+    <h2 id="aa3"></h2>
+    <h2 id="aa4"></h2>
+    <script>
+        const number= [10,20,30,40,50];
+        document.getElementById('aa3').innerHTML= number;
+        number.pop();
+        document.getElementById('aa4').innerHTML= number;
+    </script>
+    <hr>
+      <!-- =====================================================  -->
+      <h3 id="rr5"></h3>
+      <h3 id="rr6"></h3>
+      <script>
+        const cars= ['volvo','oudi','bmw'];
+        document.getElementById('rr5').innerHTML=cars;
+        cars.shift();
+        document.getElementById('rr6').innerHTML=cars;
+      </script>
+      <hr>
+      <!-- ========================================================= -->
+      <h3 id="rr7"></h3>
+      <h3 id="rr8"></h3>
+      <script>
+        const fruits =['banan','mengo','kiwi'];
+        document.getElementById('rr7').innerHTML= fruits;
+        fruits.unshift('apple');
+        document.getElementById('rr8').innerHTML= fruits;
+      </script>
+      <hr>
+      <!-- ============================================================ -->
+      <h3 id="rr9"></h3>
+      <script>
+        const cars1 =['bmw','oudi','volvo'];
+        const cars2 =[203, 304, 405];
+
+        const cars3 =cars1.concat(cars2);
+        document.getElementById('rr9').innerHTML=cars3;
+      </script>
+      <hr>
+      <!-- ====================================================  -->
+      <h3 id="rr10"></h3>
+      <h3 id="tt1"></h3>
+      <script>
+        const number1= [102,103,104,105];
+        document.getElementById('rr10').innerHTML=number1;
+        delete number1 [0];
+        document.getElementById('tt1').innerHTML='delet--'+ number1 [3];
+      </script>
+      <hr>
+      <!-- =====================================================  -->
+       <h3 id="tt2"></h3>
+     
+       <script>
+        const name3= ['tushal','piush','kevin','fjjj'];
+        document.getElementById('tt2').innerHTML=name3.join('*');
+       </script>
+       <hr>
+       <!-- =====================================================  -->
+
+      <h3 id="tt3"></h3>
+      <h3 id="tt4"></h3>
+      <script>
+         const cars4 =['bmw','oudi','volvo'];
+         document.getElementById('tt3').innerHTML=cars4;
+         cars4.splice(2,0, 'leman','mango');
+         document.getElementById('tt4').innerHTML=cars4;    
+      </script>
+      <hr>
+     <!-- -----------------------------------------  -->
+      <h3 id="tt5"></h3>
+      <h3 id="tt6"></h3>
+      <script>
+        const number3= [22,33,44,55,66];
+        const number4= number3.slice(1,4);
+        document.getElementById('tt6').innerHTML=number3 +"<br>"+ number4;
+
+      </script>
+
+    
+</body>
+</html>

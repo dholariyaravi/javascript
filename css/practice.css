@@ -1,0 +1,102 @@
+button {
+    background-color: #AC7D88;
+    border-radius: 5px;
+    height: 40px;
+    width: auto;
+}
+
+button:hover{
+     box-shadow: 0 4px 10px 0 rgba(181, 139, 139, 0.589), 0 6px 20px 0 rgba(68, 49, 174, 0.817);
+       transition: all 0.5s linear;
+      transform: scale(1.03);
+}
+
+
+body {
+    background-color: #DEB6AB;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    border-radius: 30px;
+    border: 1px solid;
+}
+
+img:hover {
+    
+   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.589), 0 6px 20px 0 rgba(0, 0, 0, 0.817);
+    /* box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green; */
+    transition: all 0.5s linear;
+    transform: scale(1.03);
+}
+
+nav {
+    background-color: #85586F;
+    height: 60px;
+    text-align: center;
+    font-size: xx-large;
+    border-radius: 20px;
+    color: white;
+}
+
+
+
+/* From uiverse.io by @alexmaracinaru
+.button {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+   }
+   
+   .button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+   }
+   
+   .button span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+   }
+   
+   .button svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+   }
+   
+   .button:hover:before {
+    width: 100%;
+    background: #b1dae7;
+   }
+   
+   .button:hover svg {
+    transform: translateX(0);
+   }
+   
+   .button:active {
+    transform: scale(0.95);
+   } */

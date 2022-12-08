@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- sort..... -->
+    <h2 id="tt1"></h2>
+    <h2 id="tt2"></h2>
+    <script>
+        const name1 =['ravi','rajan','milan','tushal','akhil'];
+        document.getElementById('tt1').innerHTML=name1;
+        name1.sort()
+        document.getElementById('tt2').innerHTML=name1;
+    </script>
+    <hr>
+    <!-- -----------------------------------------  -->
+    <!-- reverse ... -->
+    <h2 id="tt3"></h2>
+    <h2 id="tt4"></h2>
+    <script>
+        const name =['ravi','rajan','milan','tushal','akhil'];
+        document.getElementById('tt3').innerHTML= name;
+        name.sort();
+        name.reverse();
+        document.getElementById('tt4').innerHTML= name;
+    </script>
+    <hr>
+    <!-- numeric sort .. -->
+    <h2 id="tt5"></h2>
+    <h2 id="tt6"></h2>
+    <script>
+        const parsan =[22,1,4,29, 87,6,37,24];
+        document.getElementById('tt5').innerHTML= parsan;
+        parsan.sort(function (a, b) {return (a -b)});
+        document.getElementById('tt6').innerHTML=parsan;
+    </script>
+    <hr>
+    <!-- -----------------------------------------  -->
+    <h2 id="tt7"></h2>
+    <h2 id="tt8"></h2>
+    <script>
+        const parsan1 = [7,57,78,3,89,100,4];
+        document.getElementById('tt7').innerHTML= parsan1;
+        parsan1.sort (function (a ,b) {return (b-a)});
+        document.getElementById('tt8').innerHTML= parsan1;
+    </script>
+    <hr>
+    <!-- =============================================  -->
+   
+    <button onclick="myfunction2()">alphabeticall</button>
+    <button onclick="myname()">number</button>
+
+    <h2 id="tt9"></h2>
+
+    <script>
+        const parsan2 = [22,33,45,1,88,4,98,100,13,];
+        document.getElementById('tt9').innerHTML= parsan2;
+
+        function myfunction2(){
+            parsan2.sort();
+            document.getElementById('tt9').innerHTML =parsan2;
+        }
+
+        function myname(){
+            parsan2.sort (function (a ,b) {return (a-b)});
+            document.getElementById('tt9').innerHTML = parsan2;
+        }
+    </script>
+    <hr>
+    <!-- -----------------------------------------  -->
+    <!-- ================================== -->
+
+  <button onclick="myfunction1()">click me</button>
+  <h4 id="rt1"></h4>
+  <script>
+   const number5=[29,3,58,56,5,46,99,38,];
+   document.getElementById('rt1').innerHTML=number5;
+
+   function myfunction1(){
+    number5.sort (function (a ,b) {return 0.5 - Math.random()});
+    document.getElementById("rt1").innerHTML = number5;
+   }
+  </script>
+    
+
+    <hr>
+    <!-- -----------------------------------------  -->
+    <!-- lowest value... -->
+    <h3> tha lowest number <span id="ee1"></span></h3>
+    <script>
+        const number=[12,34,78,2,59,90,96,35,4];
+        number.sort (function (a,b) {return (a-b)});
+        document.getElementById('ee1').innerHTML= number [0];
+    </script>
+    <hr>
+
+    <!-- highest value.. -->
+    <h3>tha highest value <span id="ee2"></span> </h3>
+    <script>
+        const number1=[49,23,2,80,56,3,46,95.17,100];
+        number1.sort (function (a, b) {return (b -a)});
+        document.getElementById('ee2').innerHTML=number1 [0]; 
+    </script>
+    <hr>
+    <!-- ----------------------------------------- -->
+    <!-- math.max apply().. -->
+    <h3> tha highest number is <span id="ee3"></span></h3>
+    <script>
+        const parsan4=[37,3,56,99,12,35,65,79];
+        document.getElementById('ee3').innerHTML= myfunction(parsan4);
+
+        function myfunction(rrr){
+           return Math.max.apply (null,rrr);
+        }
+    </script>
+    <hr>
+    <h3>tha lowest number <span id="ee4"></span></h3>
+    <script>
+        const parsan5=[34,7,56,16,66,97,2,57,3,45,];
+        document.getElementById('ee4').innerHTML= myfunction(parsan5);
+
+     function myfunction(rr1){
+        return Math.min.apply (null,rr1);
+     }
+    </script>
+    <hr>
+    <!-- =========================================  -->
+    <h3 id="ee5"></h3>
+    <script>
+        const cars =[
+            {parsan:"arvi" ,year:2017},
+            {parsan:"rajan",year:2001},
+            {parsan:"milan" , year:2003,}    
+        ]; 
+
+       mydata();
+        cars.sort(function(a ,b){return a.year - b.year});
+        mydata();
+
+        function mydata(){
+            document.getElementById('ee5').innerHTML=   
+            cars[0].parsan +" "+ cars[0].year +"<br>"+
+            cars[1].parsan +" "+ cars[1].year +"<br>"+
+            cars[2].parsan +" "+ cars[2].year ;
+        }
+    </script>
+
+    
+</body>
+</html>

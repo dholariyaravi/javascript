@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- javascript Callback. files...   -->
+    <h1>Callback js **</h1>
+    <h2 id="s1"></h2>
+    <script>
+        function mydata(name) {
+            document.getElementById('s1').innerHTML = name;
+        }
+
+        function getfile(myCallback) {
+            let rep = new XMLHttpRequest();
+            rep.open("GET", "pre.html");
+            rep.onload = function () {
+                if (rep.status == 200) {
+                    myCallback(this.responseText);
+                } else {
+                    myCallback("Error", +rep.status);
+                }
+            }
+            rep.send();
+        }
+        getfile(mydata);
+    </script>
+    <hr>
+    <!-- javascript setTimeout... callback...//  -->
+
+    <h3 id="s2"></h3>
+    <script>
+        setTimeout(function () {
+            myfunction("i love javascript");
+        }, 2000);
+
+        function myfunction(name1) {
+            document.getElementById('s2').innerHTML = name1;
+        }
+    </script>
+    <hr>
+    <!-- --------------- -->
+
+    <h3 id="s3"></h3>
+    <script>
+        setTimeout(myfunction1, 3000);
+
+        function myfunction1() {
+            document.getElementById('s3').innerHTML = "hello";
+        }
+    </script>
+    <hr>
+
+
+    <!-- ======================================================================================================= -->
+
+    <!-- JavaScript Promise. timeout...//   -->
+    <h1>Promise js **</h1>
+    <h3 id="f1"></h3>
+
+    <!-- <script>
+        let mypromise = new Promise(function(myResolve,mydata){
+            setTimeout(function(){myResolve("l love  you....");},2000);
+        });
+
+        mypromise.then (function(value){
+            document.getElementById('f1').innerHTML= value; 
+        });
+    </script>  -->
+
+    <hr>
+    <!-- JavaScript Promise.. files..//  -->
+    <h3 id="s5"></h3>
+    <script>
+        function mydate(num) {
+            document.getElementById('s5').innerHTML = num;
+        }
+
+        const mypromise = new Promise(function (myResolve, myReject) {
+            let req = new XMLHttpRequest();
+            req.open("GET", "Async.html");
+            req.onload = function () {
+                if (req.status == 200) {
+                    myResolve(req.response);
+                } else {
+                    myReject('files not found');
+                }
+            };
+            req.send();
+        });
+
+        mypromise.then(
+            function (value) {
+                mydate(value)
+            },
+            function (error) {
+                mydate(error);
+            }
+        );
+    </script>
+
+
+    <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- async timeout......  -->
+    <h1>async js await **</h1>
+    <hr>
+
+    <h3 id="s7"></h3>
+    <script>
+        async function myname() {
+            let mypromise = new Promise(function (resorat) {
+                setTimeout(function () {
+                    resorat('i love may fred');
+                }, 2000);
+            })
+            document.getElementById('s7').innerHTML = await mypromise;
+        }
+        myname();
+    </script>
+
+    <hr>
+    <!-- file async....  -->
+    <h2 id="demo1"></h2>
+    <script>
+        async function myname() {
+            let myPromise = new Promise(function (rede) {
+                let req = new XMLHttpRequest();
+                req.open("GET", "pre.html");
+                req.onload = function () {
+                    if (req.status == 200) {
+                        rede(req.response);
+                    } else {
+                        rede("file not found");
+                    }
+                };
+                req.send();
+            });
+            document.getElementById("demo1").innerHTML = await myPromise;
+        }
+        myname();
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

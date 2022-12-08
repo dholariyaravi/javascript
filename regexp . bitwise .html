@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style=" font-size: 30px;">
+    <!-- JavaScript Bitwise Operations...  -->
+    <h2 id="r1"></h2>
+
+
+
+    <script>
+        document.getElementById('r1').innerHTML = 10 | 5;
+    </script>
+    <h2 id="r2"></h2>
+    <script>
+        document.getElementById('r2').innerHTML = 15 & 9;
+    </script>
+    <h2 id="r3"></h2>
+    <script>
+        document.getElementById('r3').innerHTML = ~10;
+    </script>
+    <h2 id="r4"></h2>
+    <script>
+        document.getElementById('r4').innerHTML = 10 >> 3;
+    </script>
+
+    <!-- JavaScript Regular Expressions.....  -->
+
+    <script>
+        let na = 'ravi dholariya';
+        let ma = na.search('Dholariya');
+        document.write(ma);
+    </script>
+    <hr>
+    <!-- String replace() With a String....  -->
+
+    <button onclick="myfunction()">click me</button>
+    <h2 id="t1">ravi dholariya</h2>
+
+    <script>
+        function myfunction() {
+            let tttt = document.getElementById('t1').innerHTML;
+            document.getElementById('t1').innerHTML =
+                tttt.replace(/dholariya/i, "senjaliya");
+        }
+    </script>
+    <hr>
+
+    <p id="t2"></p>
+    <script>
+        let ta1 = '1234456788';
+        let resu = ta1.match(/[1-6]/g);
+        document.getElementById('t2').innerHTML = resu;
+    </script>
+
+    <hr>
+
+    <p id="id1">life is </p>
+    <h2 id="ravi1"></h2>
+
+    <script>
+        let name2 = document.getElementById('id1').innerHTML;
+        const mkl = /e/;
+        document.getElementById('ravi1').innerHTML = mkl.test(name2);
+    </script>
+
+    <hr>
+
+
+</body>
+
+</html>

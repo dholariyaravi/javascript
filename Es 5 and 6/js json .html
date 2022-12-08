@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4 id="de1"></h4>
+    <script>
+        const jes ={"name":"ravi" ,"lanme":"dholariya"};
+        jes['lanme'] = "senjaliya" ; 
+        document.getElementById("de1").innerHTML = jes['lanme'];
+    </script>
+    <hr>
+    <!-- JSON.parse()... string mathi object ma conword kare che -->
+    <h2>JSON.parse</h2>
+    <h3 id="de2"></h3>
+    <script>
+        const js = '{"name":"rajan","lastname":"kathiriya","age":20}'
+        const object = JSON.parse(js);
+        document.getElementById('de2').innerHTML = object.name +" "+ object.lastname ;
+     </script>
+     <hr>
+     <h3 id="de3"></h3>
+     <script>
+        const jsa = '["Audi","BMW","KIV"]';
+        const obj = JSON.parse(jsa);
+        document.getElementById('de3').innerHTML = obj [1]; 
+     </script>
+     <hr>
+     <h2 id="de4"></h2>
+     <script>
+        const js1 = '{"name":"rajan","birth":"2004-11-18","age":20}'
+        const obje = JSON.parse(js1);
+        obje.bir = new Date(obje.birth);
+        document.getElementById('de4').innerHTML = obje.name +" "+ obje.bir ;    
+     </script>
+     <hr>
+
+     <!-- JSON.stringify().... / /  -->
+     <h2> JSON stringify</h2>
+     <h4 id="de5"></h4>
+     <script>
+        const name1 = {name : "milan", lname : "senjaliya", age : "30"};
+        const sti = JSON.stringify(name1);
+        document.getElementById('de5').innerHTML = sti ;
+     </script>
+     <hr>
+
+     <h4 id="de6"></h4>
+     <script>
+        const name2 = ["apple", "banana","mango",1,2,3,4];
+        const st = JSON.stringify(name2);
+        document.getElementById('de6').innerHTML = st ;
+     </script>
+     <hr>
+     <h1> object mathi string ma conword.... and
+        string mathi object ma conword..</h1>
+     <h3 id="de7"></h3>
+     <script>
+        const naa = { name : "jay",age : "20", city : "rajkot"};
+        const obj1 = JSON.stringify(naa);
+        localStorage.setItem ("aaJSON" , obj1);
+        
+        let text = localStorage.getItem ("aaJSON");
+        let on = JSON.parse(text);
+        document.getElementById('de7').innerHTML = on.name;
+     </script>
+     <hr>
+     <h3 id="de8"></h3>
+     <script>
+        const mm = { name : "jay",today :new Date(), city : "rajkot"};
+        const ll = JSON.stringify(mm);
+        document.getElementById('de8').innerHTML = ll;  
+     </script>
+     <hr>
+
+     <!-- JSON Object Literals.... /  -->
+     <h3 id="r1"></h3>
+     <script>
+      const maa = '{"name":"ravi", "lname":"dholariya"}';
+      const na = JSON.parse(maa);
+      document.getElementById('r1').innerHTML = na['name'] ;
+     </script>
+     <hr>
+
+    <h2> value joti hoy yare.</h2>
+    <!-- na1[p] ... /  -->
+     <h3 id="r2"></h3>
+     <script>
+      const ma1 = '{"name":"ravi", "lname":"dholariya", "age":20}';
+      const na1 = JSON.parse(ma1);
+
+       let ss = "";
+      for (let p in na1){
+         ss += na1[p] +"<br>" ;
+      }
+      document.getElementById('r2').innerHTML = ss;
+     </script>
+     <hr>   
+
+     <!-- JSON Array Literals... /  -->
+     <h1>JSON Array </h1>
+     <h3 id="r3"></h3>
+     <script>
+      const Array = '["apple ","banana ","mango "]'
+      const arr = JSON.parse(Array);
+      document.getElementById('r3').innerHTML = arr[0];
+     </script>
+     <hr>
+
+     <h3 id="r4"></h3>
+     <script>
+      const aa = '{"name":"trushal","cars":["Audi","BMW"]}';
+      const bb = JSON.parse(aa);
+
+      let ms = "";
+      for (let y in bb.cars){
+         ms += bb.cars[y] +", ";
+      }
+      document.getElementById('r4').innerHTML = ms;
+     </script>
+     <hr>
+     
+     <h3 id="r5"></h3>
+     <script>
+      const aa1 = '{"name":"trushal","cars":["Audi","BMW","KIV"]}';
+      const bb2 = JSON.parse(aa1);
+
+     let text1 = " " ;
+      for (let i = 0; i < bb2.cars.length; i++){
+           text1 += bb2.cars[i] +"<br>";
+      }
+      document.getElementById('r5').innerHTML = text1;
+     </script>
+     <hr>
+     
+    <!-- ===================================================================  -->
+     <h1>JSON From a Server</h1>
+     <!-- JSON Server....  -->
+     <h2 id="a6"></h2>
+     <script>
+      const web = new XMLHttpRequest();
+      web.onload = function(){
+         let obs = JSON.parse( this.responseText);
+         document.getElementById('a6').innerHTML = obs.age ;
+      }
+
+      web.open("GET", "javascript/server.json");
+      web.send();
+     </script>
+     <hr>
+
+     <!-- Array as JSON....  -->
+     <h3 id="a7"></h3>
+     <script>
+      const sev = new XMLHttpRequest();
+       sev.onload = function(){
+         let serv = JSON.parse(this.responseText) 
+         document.getElementById('a7').innerHTML = serv;
+       }
+       sev.open("GET","javascript/array.json", true);
+       sev.send();
+     </script>
+     <hr>
+     
+     <!-- JSON PHP...  -->
+     <h2>file name 'js' in jees.js</h2>
+     <h3 id="a8"></h3>
+     <script>
+      const dem = JSON.stringify({"limit":5});
+   
+      const sev1 = new XMLHttpRequest();
+       sev1.onload = function(){
+         document.getElementById('a8').innerHTML = this.responseText;
+       }
+       sev1.open("GET","javascript/jees.js");
+       sev1.send();
+     </script>
+     <hr>
+     <!-- JSON HTML.....  -->
+     <!-- JSONP.... /    -->
+   
+
+
+     
+
+
+
+
+
+
+    
+
+     
+   
+
+
+
+
+    
+    
+</body>
+</html>

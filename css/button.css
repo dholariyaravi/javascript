@@ -1,0 +1,51 @@
+html, body {
+    width: 50%;
+    margin:  0 auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+.container{
+    width: 360px;
+}
+.demo1{
+    text-align: center;
+}
+.demo1:hover{
+    color: blueviolet;
+}
+
+#data{
+    width: 300px;
+    height: 46px;
+    border: 1px solid black;
+    outline: none;
+    font-size: 25px;
+    vertical-align: middle;
+    background-color: rgb(114, 106, 146);
+}
+#data:hover{
+    background-color: aqua;
+    color: black;
+}
+
+#new{
+    background-color: cadetblue;
+    height: 50px;
+    width: 50px;
+    border:  1px solid black;
+    vertical-align: middle;
+    font-size: 30px;
+}
+#new:hover{
+    background-color: rgb(163, 138, 129);
+
+}
+
+.rr1{
+    margin-top: 25px;
+}
+
+.paragraph-styling {
+    margin: 0;
+    cursor: pointer;
+    font-size: 20px;
+}

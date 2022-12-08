@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="s1"></h2>
+    <script type="module">
+        import {name, age,lname,name1,age1} from "./modul.js" ;
+
+    let nav = "my name is "+ name +" "+lname + " age is " + age 
+    +"<br>" + name1 + age1 ;
+    document.getElementById('s1').innerHTML = nav
+   </script>
+
+    <hr>
+    <h2 id="s2"></h2>
+    <script type="module">
+        import data from "./modul.js";
+    document.getElementById('s2').innerHTML = data();
+   </script>
+
+
+</body>
+
+</html>

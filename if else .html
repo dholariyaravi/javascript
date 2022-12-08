@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="r1"> good evening</h2>
+    <script>
+        if (new Date().getHours() < 20) {
+            document.getElementById('r1').innerHTML = 'goood day';
+        }
+    </script>
+    
+    <h3 id="r2"></h3>
+    <script>
+        const nam = new Date().getHours();
+        let name1;
+
+        if (nam < 10) {
+            name1 = 'good mornig ';
+        } else if (nam < 23) {
+            name1 = 'good day ';
+        } else {
+            name1 = 'good night';
+        }
+
+        document.getElementById("r2").innerHTML = name1;
+    </script>
+    <hr>
+
+    <h3 id="r3"></h3>
+    <script>
+        let day;
+        switch (new Date().getDay()) {
+            case 0:
+                day = 'sunday';
+                break
+            case 1:
+                day = " monday"
+                break
+            case 2:
+                day = 'tuesday'
+                break
+            case 3:
+                day = "wednesday"
+                break
+            case 4:
+                day = "thursday"
+                break
+            case 5:
+                day = "friday"
+                break
+            case 6:
+                day = " saturday"
+                break
+
+        }
+        document.getElementById('r3').innerHTML = day;
+    </script>
+    <hr>
+
+    <h4 id="r4"></h4>
+    <script>
+        let day1;
+        switch (new Date().getDay()) {
+            case 0:
+                day1 = 'sunday'
+                break
+
+            case 6:
+                day1 = 'saturday';
+                break
+
+            default:
+                day1 = "new day weekli"
+        }
+        document.getElementById('r4').innerHTML = day1;
+    </script>
+
+    <!-- Write program with using if else and check if number is  positive or nagative -->
+    <hr>
+    <h2 id="r5"></h2>
+    <script>
+       const num = new Date().getHours();
+       let na11 ;
+
+       if (num < 23){
+        na11 = '-10 nagative' ;
+       }
+       else{
+        na11 = '20 positive ';
+       }
+        document.getElementById('r5').innerHTML = na11;
+    </script>
+   <hr>
+   <!-- Write program and check if age is less than 18 then 
+    not eligible for driving and if not then print  eligible -->
+    <h2 id="r6"></h2>
+
+    <script>
+        let age = 18 +1;
+        let  driving  ;
+
+        if ( age == 19){
+            driving = "this is a driving "
+        }
+        else{
+            driving = "this not a driving "
+        }
+        
+        document.getElementById('r6').innerHTML = driving ;
+    </script>
+    <hr>
+
+    <!-- ======================================= -->
+    <!-- const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; -->
+    <script>
+        let = months ;
+        switch ( new Date().setMonth()){
+            case 0:
+            months  = 'January'
+                break
+
+                case 1:
+            months  = 'February'
+                break
+
+                case 2:
+            months  = 'March'
+                break
+
+                case 3:
+            months  = 'April'
+                break
+                
+                case 4:
+            months  = 'May'
+                break
+                case 5:
+            months  = 'June'
+                break
+                case 6:
+            months  = 'July'
+                break
+                case 7:
+            months  = 'August'
+                break
+                case 8:
+            months  = 'September'
+                break
+                case 9:
+            months  = 'October'
+                break
+                case 10:
+            months  = 'November'
+                break
+                case 11:
+            months  = 'December'
+                break
+        }
+        
+        document.getElementById('r6').innerHTML = months ;
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Array simpal -->
+    <h1 id="demo"></h1>
+    <script>
+        const name1 = ['jay', ' uday', 'sejal'];
+        document.getElementById('demo').innerHTML =typeof name1;
+    </script>
+    <hr>
+    <!-- ============================================================  -->
+
+    <!-- two methad che Array ni -->
+    <script>
+        const cars = ['volvo', 'BMW', 'auodi'];
+        cars[1] = "saab"
+        document.write((cars));
+    </script> <br>
+    <hr>
+    <!-- ----------------------------------------- -->
+    <script>
+        const r1 = new Array('ravi', "rajan", 'tushal');
+        document.write((r1))
+        document.write((r1.length))
+    </script> <br>
+    <hr>
+    <!-- ========================================================= -->
+    <h1 id="demo1"></h1>
+    <script>
+        const name = ["milan", 'darshi', 'jay', 'piush'];
+        document.getElementById('demo1').innerHTML = name[name.length - 1];
+    </script>
+    <hr>
+    <!-- -------------------------------------------------  -->
+    <h1 id="demo2"></h1>
+    <!-- push and length  -->
+    <script>
+        const r2 = ['welcome', 'html', 'css', 'javacripat'];
+        r2[r2.length] = "hello";
+        document.getElementById('demo2').innerHTML = r2;
+    </script>
+    <hr>
+    <!-- push.... -->
+    <button onclick="frust()">click me</button>
+    <script>
+        const Name=['banana','apple','mengo'];
+        window.alert((Name));
+
+        function frust(){
+            Name.push ('leman');
+            window.alert((Name));
+        }
+    </script>
+    <hr>
+
+    <!-- <button onclick=" window.alert(r3) [0];"> click me</button> -->
+    <h1 id="demo3"></h1>
+    <script>
+        const name3 = ["banana", "apple", "orang"];
+        document.getElementById('demo3').innerHTML = name3[0] +''+name3.length;
+    </script> <hr>
+    <!-- ====================================================== -->
+
+    <h1 id="demo4"></h1>
+    <script>
+        const cars2 = [];
+        cars2[0] = 'volvo';
+        cars2[1] = 'bmw';
+        cars2[2] = 'oudi';
+        document.getElementById('demo4').innerHTML = Array.isArray (cars2);
+    </script>
+    <hr>
+    <!-- -----------------------------------------------  -->
+    <h2 id="demo5"></h2>
+    <script>
+        const number= new Array(30,100,150,37,20);
+        number.push ('340');
+        document.getElementById('demo5').innerHTML=number ;
+    </script>
+    <hr>
+    <script>
+        const name4 =[20,30,40,50];
+        document.write((name4 instanceof Array));
+        
+    </script> <hr>
+    <h2 id="demo6"></h2>
+    <script>
+        const number1=[10,20,30,40,50,60];
+                
+        var a = " <ul>";
+        number1.forEach (methad);
+        a += "</ul>";
+        document.getElementById('demo6').innerHTML= a;
+
+        function methad(value){
+            a += " <li>" +value+"</li>"
+        };
+        
+    </script>
+
+
+
+
+
+</body>
+
+</html>

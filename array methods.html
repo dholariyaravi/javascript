@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- to strong... -->
+    <h2 id="r1"></h2>   
+    <script>
+        const name = ['data', 'hello', 'hyyy'];
+        document.getElementById('r1').innerHTML = name.toString();
+    </script>
+    <!-- -----------------------------------------  -->
+    <hr>
+    <!-- join()... -->
+    <h2 id="ra2"></h2>
+    <script>
+        const furits = ['banana', 'apple', 'mengo', 'orange'];
+        document.getElementById('ra2').innerHTML = furits.join('*');
+    </script>
+    <hr>
+    <!-- -----------------------------------------  -->
+    <!-- pop()..... -->
+    <h3 id="ra4"></h3>
+    <h3 id="ra3"></h3>
+    <script>
+        const name1 = ['ravi', 'rajan', 'milan', 'darshit'];
+        document.getElementById('ra4').innerHTML = name1;
+        name1.pop();
+        document.getElementById('ra3').innerHTML = name1;
+    </script>
+    <!-- -----------------------------------------  -->
+    <hr>
+    <!-- push........... -->
+    <h2 id="ra5"></h2>
+    <h2 id="ra6"></h2>
+    <script>
+        const cars = ['volvo', 'bmw', 'audo'];
+        document.getElementById('ra5').innerHTML = cars;
+        cars.push('i 10');
+        document.getElementById('ra6').innerHTML = cars;
+    </script>
+    <hr>
+    <!-- -----------------------------------------  -->
+    <!-- shift()... -->
+    <h3 id="ra7"></h3>
+    <h3 id="ra8"></h3>
+    <script>
+        const furits1 = ['banan', 'apple', 'kivi'];
+        document.getElementById('ra7').innerHTML = furits1;
+        furits1.shift();
+        document.getElementById('ra8').innerHTML = furits1;
+    </script>
+    <hr>
+    <!-- -----------------------------------------  -->
+    <!-- unshifi().. -->
+    <h3 id="ra9"></h3>
+    <h3 id="ra10"></h3>
+    <script>
+        const number1 = [10, 20, 30, 40, 50, 60];
+        document.getElementById('ra9').innerHTML = number1;
+        number1.unshift('500');
+        document.getElementById('ra10').innerHTML = number1;
+    </script>
+    <hr>
+    <!-- ----------------------------------------- -->
+    <!-- delete()....  -->
+    <h4 id="rr1"></h4>
+    <h4 id="rr2"></h4>
+    <script>
+        const name2 = ['ravi', 'rajan', 'milan', 'darshir'];
+        document.getElementById('rr1').innerHTML = name2;
+        delete name2[0];
+        document.getElementById('rr2').innerHTML = 'delet' + " -/" + name2[0];
+    </script>
+    <hr>
+    <!-- -----------------------------------------  -->
+    <!-- concatenating ()... -->
+    <h2 id="rr4"></h2>
+
+    <script>
+        const number2 = [0, 1, 2, 3, 4];
+        const number3 = [15, 25, 35, 45, 55];
+        const number5 = [151, 251, 325, 425, 525];
+
+        const number4 = number2.concat(number3, number5)
+        document.getElementById('rr4').innerHTML = number4;
+    </script>
+    <hr>
+    <!-- -----------------------------------------------  -->
+    <!-- splice ()... -->
+    <h2 id="rr3"></h2>
+    <h2 id="rr5"></h2>
+    <script>
+        const fruits = ['banan', 'lemon', 'apple'];
+        document.getElementById('rr3').innerHTML = fruits;
+        fruits.splice(2, 1, 'mango', 'kiwi');
+        document.getElementById('rr5').innerHTML = fruits;
+    </script>
+    <hr>
+    <!-- -----------------------------------------------  -->
+    <!-- slice ().. -->
+    <h3 id="rr6"></h3>
+    <h3 id="rr7"></h3>
+    <script>
+        const name3 = ['ravi', 'rajan', 'jay', 'milan'];
+        const name4 = name3.slice(1, 4);
+        document.getElementById('rr7').innerHTML = name3 + "<br>" + name4;
+    </script>
+    <hr>    
+    <!-- -----------------------------------------  -->
+    <!-- length... -->
+    <p id="demo"></p>
+    <script>
+        const data = ['302', '339', '399', '338'];
+        data[data.length] = '359' + ',' + '484';
+        document.getElementById('demo').innerHTML = data;
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<body onload="myda()">
+
+    <h2>JavaScript HTML Events</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        function myda() {
+            let text = "";
+            if (navigator.myda == true) {
+                text = "this is a ";
+            } else {
+                text = "thi is a not";
+            }
+            document.getElementById('demo').innerHTML = text;
+        }
+    </script>
+    <hr>
+    <input type="text" id="fname" name="fname" onchange="upperCase()">
+
+    <script>
+        function upperCase() {
+            const k = document.getElementById("fname");
+            k.value = k.value.toupperCase();
+        }
+    </script>
+
+    <!-- onmouseover and onmouseout Events......  -->
+    <hr>
+    <div onmouseover="myonm(this)" onmouseout="mout(this)" style="background-color: rgb(78, 174, 14); width: 130px;
+    height: 50px; text-align: center; padding: 40px; font-size: 30px;">hiii</div>
+
+    <script>
+        function myonm(obj) {
+            obj.innerHTML = "good day";
+            obj.style.backgroundColor = "darkcyan";
+        }
+
+        function mout(obj) {
+            obj.style.backgroundColor = "#D94A38";
+            obj.innerHTML = " over me ";
+        }
+    </script>
+    <hr>
+    <!-- JavaScript HTML DOM EventListener....  -->
+    <button id="myan"> click me</button>
+    <script>
+        document.getElementById('myan').addEventListener("click", function () {
+            alert("javascript");
+        });
+    </script>
+    <hr>
+    <button id="date"> click me</button>
+    <script>
+        let x = document.getElementById('date');
+        x.addEventListener("click", myfaunction);
+        x.addEventListener("click", myfa1);
+
+        function myfaunction() {
+            alert("hello");
+        }
+
+        function myfa1() {
+            alert("my fred ");
+        }
+    </script>
+    <hr>
+    <button id="myaa">click me</button>
+    <h3 id="k1"></h3>
+    <script> 
+       let p = document.getElementById('myaa');
+       p.addEventListener ("mouseover", myname);
+       p.addEventListener ("click", myname1);
+       p.addEventListener ("mouseout", myname2);
+
+        function myname() {
+            document.getElementById('k1').innerHTML += "Moused over <br>";
+        }
+
+        function myname1() {
+            document.getElementById('k1').innerHTML += "click <br>";
+        }
+
+        function myname2() {
+            document.getElementById('k1').innerHTML += "Moused out<br>";
+        }
+    </script>
+    <hr>
+    
+    <!-- DOM Elements (Nodes).. ////  -->
+
+    <div id="te1">
+        <p id="p1">thi is a frist </p>
+        <p id="p2">thi is a last and frist </p>
+        <p id="p3">thi is a last </p>
+    </div>
+
+    <script>
+        const m = document.createElement('h2');
+        const l = document.createTextNode("new text");
+        m.appendChild(l);
+        const k = document.getElementById ('te1');
+        const mm = document.getElementById('p1');
+        k.insertBefore(m,mm); 
+     
+        document.getElementById('p2').remove();
+        
+    </script>
+    <hr>
+
+
+
+    <div id="div1">
+        <p id="p11">this is a new</p>
+        <p id="p22">this is a new one line</p>
+    </div>
+
+    <button onclick="delet()">remov</button>
+    <script>
+        function delet(){
+            document.getElementById('p11').remove();
+            style.backgroundColor = "#D94A38";
+        };
+    </script>
+    <hr>
+
+    <div id="ne1">
+        <p id="h11">new in my profil</p>
+        <p id="h22">new date</p>
+    </div>
+
+    <script>
+        const a = document.getElementById('ne1');
+        const a1 = document.getElementById('h11');
+        const s1 = document.createElement('h3');
+        const s2 = document.createTextNode('to day is new date');
+        s1.appendChild(s2);
+
+        a.replaceChild(s1,a1);      
+    </script>
+    <hr>
+
+<!-- DOM Collections... /  -->
+      <a> new deta</a>
+       
+      <a>ravi patel</a>
+
+      <h2 id="b1"></h2>
+      <script>
+           const ll = document.getElementsByTagName("a");
+           
+           document.getElementById('b1').innerHTML ="my name is " + ll[1].innerHTML;
+        //    document.getElementById('b1').innerHTML = ll.length;
+      </script>
+      <hr>
+
+      <!-- <p>hello</p>
+     <p>javascript</p>
+     <p>css</p>
+     <button  onclick="myfaunction()">click me</button>
+     
+     <script>
+        function myfaunction() {
+            const col =document.getElementsByTagName('p');
+            for (let d = 0; d < col.length; d++){
+                col[d].style.col = "red";
+            }
+        }
+     </script> -->
+
+
+     <!-- DOM NodeList Object... ///  -->
+     
+</body>
+
+</html>

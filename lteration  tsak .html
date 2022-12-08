@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- task ....... -->
+
+    <h1 id="h11"></h1>
+    <script>
+        const man = [1, 2, 3, 4, 5, 6];
+        let date = " ";
+        man.forEach(ravi1);
+        document.getElementById('h11').innerHTML = date;
+
+        function ravi1(value, index, Array) {
+            date += value + " <br>";
+        }
+    </script>
+    <h2 id="h22"></h2>
+    <script>
+        const gem = [1, 2, 3, 4, 5, 6];
+        let gem2 = gem.map(mygem);
+        document.getElementById('h22').innerHTML = gem2;
+
+        function mygem(value, index, Array) {
+            return value * 100;
+        }
+    </script>
+    <h3 id="h33"></h3>
+    <script>
+        const meta = [1, 2, 3, 4, 5, 6];
+        let meta2 = meta.filter(mynameisa);
+        document.getElementById('h33').innerHTML = meta2;
+
+        function mynameisa(value, index, Array) {
+
+            return value > 1;
+        }
+    </script>
+    <!-- ================================================================================== -->
+
+    <hr>
+    <h1 id="ee1"></h1>
+    <script>
+        const ra = [12, 34, 25, 24, 54, ];
+        let ra1 = " ";
+        ra.forEach(myfunction);
+        document.getElementById('ee1').innerHTML = ra1;
+
+        function myfunction(value, index, Array) {
+            ra1 += value;
+        }
+    </script>
+    <hr>
+    <h2 id="ee2"></h2>
+    <script>
+        const con = [12, 34, 55, 45, 35, 5];
+        const cons1 = con.map(myfunction1);
+        document.getElementById('ee2').innerHTML = cons1;
+
+        function myfunction1(value, index, Array) {
+            return value * 2;
+        }
+    </script>
+    <!-- ------------///////////////========= -->
+    <h2 id="ee3"></h2>
+    <script>
+        const na1 = [12, 23, 34, 35, 12, 21];
+        let na2 = na1.map(myfunction3);
+        document.getElementById('ee3').innerHTML = na2;
+
+        function myfunction3(value, Array, index) {
+            return value - 10
+        }
+    </script>
+    <h3 id="ee4"></h3>
+    <script>
+        const mm = [11, 56, 3, 77, 17, 79];
+        let nnn1 = mm.map(myfunction4);
+        document.getElementById('ee4').innerHTML = nnn1;
+
+        function myfunction4(value, Array, index) {
+            return value / 10;
+        }
+    </script>
+    <h4 id="ee5"></h4>
+    <script>
+        const uu = [10, 20, 30, 40, 50];
+        let gg1 = uu.map(myname);
+        document.getElementById('ee5').innerHTML = gg1;
+
+        function myname(value, Array, index) {
+            return value + 10;
+        }
+    </script>
+    <h5 id='ee6'></h5>
+    <script>
+        const tt1 = [15, 46, 8, 16, 98, 173];
+        let ff2 = tt1.map(myfunction5);
+        document.getElementById('ee6').innerHTML = ff2;
+
+        function myfunction5(value, Array, index) {
+            return value % 7;
+        }
+    </script>
+    <hr>
+    <!-- filter ()...  -->
+    <h1 id="rr1"></h1>
+    <script>
+        const qq1 = [60, 20, 30, 3, 90, 5, 6];
+        let uu1 = qq1.filter(myname1);
+        document.getElementById('rr1').innerHTML = uu1;
+
+        function myname1(value, Array, index) {
+            return value > 10;
+        }
+    </script>
+    <hr>
+    <!-- reduce...     -->
+    <h2 id="rr2"></h2>
+    <script>
+        const qq21 = [60, 20, 30, 3, 90, 5, 6];
+        let rr2 = qq21.reduce(myname2);
+        document.getElementById('rr2').innerHTML = "total =:" + rr2;
+
+        function myname2(total, value, index, Array) {
+            return total + value;
+        }
+    </script>
+    <!-- reduceRight..  -->
+    <h2 id="rr3"></h2>
+    <script>
+        const ff1 = [60, 20, 30, 3, 90, 5, 6];
+        let gg2 = ff1.reduceRight(myname4);
+        document.getElementById('rr3').innerHTML = "reduceRight value=:" + gg2;
+
+        function myname4(total, value, index, Array) {
+            return total + value;
+        }
+    </script>
+    <hr>
+    <!-- every.. true/ false ma answer  -->
+    <h3 id="rr4"></h3>
+    <script>
+        const hh1 = [12, 34, 57, 56, 46, 17];
+        let ww2 = hh1.every(myname5);
+        document.getElementById('rr4').innerHTML = ww2;
+
+        function myname5(value, index, Array) {
+            return value > 10;
+        }
+    </script>
+
+    <h4 id="rr5"></h4>
+    <script>
+        const hh2 = [12, 34, 57, 56, 46, 17];
+        let uu2 = hh2.some(mydate);
+        document.getElementById('rr5').innerHTML = uu2;
+
+        function mydate(value, index, Array) {
+            return value > 58;
+        }
+    </script>
+    <hr>
+    <!-- indexOf().. -->
+    <h2 id="rr6"></h2>
+    <script>
+        const hh3 = [12, 34, 57, 56, 46, 17];
+        let j3 = hh3.indexOf(57) + 2;
+        document.getElementById('rr6').innerHTML = j3;
+    </script>
+    <!-- lastIndexOf..  -->
+    <h3 id="rr7"></h3>
+    <script>
+        const jj2 = ['ravi', 'rajan', 'mialn', 'jay'];
+        let kk4 = jj2.lastIndexOf('ravi') + 2;
+        document.getElementById('rr7').innerHTML = kk4;
+    </script>
+    <hr>
+    <!-- keys....  -->
+    <h2 id="rr8"></h2>
+    <script>
+        const jj11 = ['ravi', 'rajan', 'mialn', 'darshit', 'jay'];
+        let kk1 = jj11.keys();
+
+        let ss1 = " ";
+        for (let h of kk1) {
+            ss1 += h + "<br>"
+        }
+        document.getElementById('rr8').innerHTML = ss1;
+    </script>
+    <hr>
+    <h3 id="rr9"></h3>
+    <script>
+        const ll1 = [12, 34, 57, 56, 46, 17];
+        let mm1 = ll1.findIndex(myravi);
+        document.getElementById('rr9').innerHTML = mm1;
+
+        function myravi(value, index, Array) {
+            return value > 45;
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>

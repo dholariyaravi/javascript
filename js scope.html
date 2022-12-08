@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- javascript scope....  -->
+
+    <h2 id="t1"></h2>
+    
+    <h3 id="t2"></h3>
+
+    <script>
+        myname();
+
+        function myname() {
+            let name = 'ravi patel';
+            document.getElementById('t1').innerHTML = typeof name + " " + name;
+        }
+
+        document.getElementById("t2").innerHTML = typeof name;
+    </script>
+    <hr>
+
+    <!-- Global JavaScript Variables...  -->
+    <h2 id="t3"></h2>
+
+    <script>
+        let car = 'oudi';   
+        myfunction() ;
+
+
+        function myfunction(){
+            document.getElementById('t3').innerHTML = ' thi is a '+ car ;
+        }
+    </script>
+    <hr>
+    <!-- Automatically Global.....  -->
+
+    <h3 id="t4"></h3>
+    <script>
+        mydate ();
+
+        document.getElementById('t4').innerHTML = name ;
+
+        function mydate(){
+            name = " ravi patel";
+        }
+    </script>
+    <p id="r6"></p>
+     <button onclick="document.getElementById('r6').innerHTML = Date ()">click me</button>
+
+     <hr>
+     <button onclick=" myname()">click me</button>
+
+    <script>
+        function myname(){
+
+        document.getElementById('r6').innerHTML = Date ()
+        }
+    </script>
+
+
+
+<!-- JavaScript Use Strict/=/=//=/=/=//=/=/=/=//=/=/=//=/=  -->
+
+
+   
+
+</body>
+
+</html>

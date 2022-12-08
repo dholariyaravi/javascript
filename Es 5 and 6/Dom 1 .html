@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- DOM....  -->
+    <p id="name"> hello </p>
+    <h2 id="a1"></h2>
+    <script>
+        const ela = document.getElementById("name");
+
+        document.getElementById('a1').innerHTML =
+            "this Text is a :" + ela.innerHTML;
+    </script>
+    <hr>
+
+    <b>i love javascript</b>
+    <h1 id="a2"></h1>
+    <script>
+        const elm = document.getElementsByTagName("b");
+
+        document.getElementById('a2').innerHTML =
+            "this text :  " + elm[0].innerHTML;
+    </script>
+    <hr>
+    <div id="main">
+        <p>hello</p>
+    </div>
+    <h2 id="a3"></h2>
+    <script>
+        const x = document.getElementById('main');
+        const y = x.getElementsByTagName("p")
+
+        document.getElementById('a3').innerHTML = " this is a " + y[0].innerHTML;
+    </script>
+    <hr>
+    <p class="nai">javascript in may be</p>
+    <h1 id="a4"></h1>
+    <script>
+        const p = document.getElementsByClassName("nai");
+
+        document.getElementById('a4').innerHTML = " this is a " + p[0].innerHTML;
+    </script>
+    <hr>
+    <p class="nam">hello world</p>
+    <h2 id="a5"></h2>
+    <script>
+        const i = document.querySelectorAll("p.nam");
+        document.getElementById('a5').innerHTML =
+            " this is a " + i[0].innerHTML;
+    </script>
+    <hr>
+    <h2 id="k1">hello </h2>
+    <script>
+        let l = document.getElementById('k1').innerHTML = " new name";
+    </script>
+
+    <hr>
+    <img id="iamg" src="/images/bulb off.jpg" alt="" width="100px">
+    <script>
+        document.getElementById('iamg').src = "/images/ravi1.jpeg";
+    </script>
+    <hr>
+    
+    <h3 id="a6"></h3>
+    <script>
+        document.getElementById('a6').innerHTML = Date();
+    </script>
+    <hr>
+
+    <!-- JavaScript Forms.....  -->
+    <script>
+        function myvalid() {
+            const u = document.forms["myfile"]["fname"].value
+            if (u == "") {
+                alert("not in submit");
+                return false;
+            }
+        }
+    </script>
+
+    <!-- ////////////////////////////////////////// -->
+
+    <form name="myfile" onsubmit="myvalid()" method="post">
+        Name :<input type="text" name="fname">
+        <input type="submit" value="submit">
+    </form>
+    <hr>
+
+    <form name="name">
+        Name :<input type="text" name="fname" required>
+        <input type="submit" value="submit">
+    </form>
+    <hr>
+
+
+    <!-- ======================================================================= -->
+
+
+    Name: <input id="num" style="color: aqua;">
+    <button style="color: rgb(234, 142, 4);" type="button" onclick="myfunction()">submit</button>
+    <h2 id="a7"></h2>
+    <script>
+        function myfunction() {
+            let p = document.getElementById('num').value
+            let text;
+            if (isNaN(p) || p < 1 || p > 10) {
+                text = "not valid";
+            } else {
+                text = "input ok";
+            }
+            document.getElementById('a7').innerHTML = text;
+        }
+    </script>
+    <!-- dom css...  -->
+    <p id="p1">hello javascript</p>
+    <script>
+        document.getElementById('p1').style.color = "blue";
+    </script>
+    <h2 id="p2">hello world</h2>
+    <button type="button" onclick="document.getElementById('p2').style.color = 'red'">click me</button>
+
+    <!-- DOM Events....  -->
+
+    <h2 onclick="this.innerHTML =`thank you`"> welcome</h2>
+    <hr>
+    <h2 onclick="mytext(this)">this is a change</h2>
+
+    <script>
+        function mytext(id) {
+            id. innerHTML = "welcome";
+
+        }
+    </script>
+    <hr>
+    <button id="myna">click me</button>
+    <h4 id="p4"></h4>
+
+
+    <script>
+        document.getElementById("myna").onclick = myfunction ;
+
+        function myfunction(){
+            document.getElementById("p4").innerHTML = Date() ;
+        }
+    </script>
+    <!-- <hr  onload="mynevget ()">
+ 
+       <h3 id="p5"></h3>
+
+       <script>
+        function mynevget(){
+            let text = "";
+            if (navigator.mynevget == true){
+                text = "is a enabled";
+            } else {
+                text = "is not  enabled";
+            };
+            document.getElementById('p5').innerHTML = text;
+
+        }
+       </script> -->
+       <hr>
+
+       Enter your name : <input type="text" id="fname" onchange="upperCase()">
+       
+        <script>
+            function upperCase() {
+                const k = document.getElementById ('fname');
+                k.value = k.value.toupperCase();
+            }
+        </script>
+        <hr>
+         
+
+
+
+
+</body>
+
+</html>

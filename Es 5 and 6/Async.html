@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <img src="/images/ravi1.jpeg" alt="" width="250px">
+    <h3>hello javascripat </h3>
+
+    <!-- JavaScript Callbacks.....  -->
+    <h3 id="a1"></h3>
+    <script>
+        function myname(na) {
+            document.getElementById('a1').innerHTML = na;
+        }
+
+        function fiast() {
+            myname("hello");
+        }
+
+        function second() {
+            myname("javascripat");
+        }
+        fiast();
+        second();
+    </script>
+    <hr>
+    <h3 id="a2"></h3>
+    <script>
+        function mydate(maa) {
+            document.getElementById('a2').innerHTML = maa;
+        }
+
+        function mycelculetar(nu1, nu2) {
+            let total = nu1 + nu2;
+            return total;
+        }
+        let naaa = mycelculetar(10, 10);
+        mydate(naaa);
+    </script>
+
+    <hr>
+    <h3 id="a3"></h3>
+    <script>
+        function mydate(maa) {
+            document.getElementById('a3').innerHTML = maa;
+        }
+
+        function mycelculetar(nu1, nu2, mycall) {
+            let total = (nu1 * nu2);
+            mycall(total);
+        }
+        mycelculetar(10, 20, mydate);
+    </script>
+    <hr>
+
+    <!-- Asynchronous JavaScript.....///  -->
+
+    <h3 id="a4"></h3>
+    
+    <script>
+        setTimeout(mytime, 2000);
+        function mytime() {
+          document.getElementById('a4').innerHTML = "hello javascripat";
+        }
+    </script>
+    <hr>
+    <h3 id="a5"></h3>
+    <script>
+       setTimeout (function() {mytime ("i love javascripat");}, 3000);
+
+        function mytime (value){
+            document.getElementById('a5').innerHTML = value;
+        }
+    </script>
+    <hr>
+    <!-- Waiting for Intervals:..  -->
+    <h3 id="a6"></h3>
+    <script>
+         setInterval (mydate , 1000);
+
+        function mydate() {
+            let a = new Date ();
+            document.getElementById('a6').innerHTML =
+            a.getHours() + ":"+
+            a.getMinutes() +":"+
+            a.getSeconds ();
+        }
+    </script>
+    <hr>
+
+    <h3 id="s4"></h3>
+    <script>
+        function myname(name){
+            document.getElementById('s4').innerHTML = name;
+        }
+        let mypromise = new Promise (function(name1,name2){
+
+            let y = 0;
+
+            if(y==0){
+                name1("Ok");
+            }else{
+                name2('erroe');
+            }
+        })
+        mypromise.then(
+            function (value) {myname (value);},
+            function (error) {myname (error);}
+        );
+    </script>
+    <hr>
+    <!-- JavaScript Promise....//  -->
+   
+<!--     
+    <h3 id="f1"></h3>
+    <script>
+        const mypromise = new Promise(function(myResolve,mydata){
+            setTimeout(function(){myResolve("l love my....");},2000);
+        });
+
+        mypromise.then (function(value){
+            document.getElementById('f1').innerHTML= value; 
+        });
+    </script> -->
+    <hr>
+
+    <!-- JavaScript Async..........................////  -->
+    <h3 id="t3"></h3>
+    <script>
+        function data (name){
+            document.getElementById('t3').innerHTML =  name ;
+        }
+
+        async function myfunction()  {return "hello"};
+
+        myfunction ().then (
+             function(value) {data (value)},
+
+        );
+    </script>
+    <hr>
+    <h3 id="t4"></h3>
+    <script>
+        async function myname(){
+           let mypromise = new Promise(function (ren){
+            ren ("hello javascript");
+           })
+           document.getElementById('t4').innerHTML = await mypromise;
+        }
+        myname();
+    </script>
+    <hr>
+    
+
+
+
+
+
+
+
+</body>
+
+</html>

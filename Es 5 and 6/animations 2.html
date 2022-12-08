@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+    <script>
+        function Validetfrom() {
+            let p = document.forms ["myname"] ["fname"].value;
+            if (p == ""){
+                alert ("name most be file out");
+                return false ;  
+            }
+        }
+    </script> -->
+    <style>
+        #na1 {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background-color: blue;
+        }
+
+        #na2 {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            background-color: aquamarine;
+        }
+
+        #na3 {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            background-color: rgb(17, 18, 17);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- <p>javascript Validetfrom </p>
+    <form  name="myname" action="" onsubmit="return Validetfrom()"
+     method="post">
+     Nmae : <input type="text" name="fname">
+      <input type="submit" value="submit">
+    </form> -->
+
+
+
+    <!-- js DOM Animation....  -->
+
+    <button onclick="mymove()">click me</button>
+    <p>-----------------------------</p>
+
+    <div id="na1">
+        <div id="na2"></div>
+        <div id="na3"></div>
+    </div>
+
+    <script>
+        function mymove() {
+            let id = null;
+            const con = document.getElementById('na2');
+            let pos = 0;
+            clearInterval(id);
+            id = setInterval(fream, 4);
+
+            function fream() {
+                if (pos == 320) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    con.style.top = pos + "px";
+                    con.style.right = pos + "px";
+                }
+            }
+        }
+    </script>
+
+    <script>
+        function mymove() {
+            let id = null;
+            const con = document.getElementById('na3');
+            let pos = 0;
+            clearInterval(id);
+            id = setInterval(fream, 9);
+
+            function fream() {
+                if (pos == 340) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    con.style.top = pos + "px";
+                    con.style.left = pos + "px";
+                }
+            }
+        }
+    </script>
+    <hr>
+   
+</body>
+
+</html>

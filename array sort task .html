@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- sort and reverse()... -->
+     <h2 id="aa1"></h2>
+     <h2 id="aa2"></h2>
+     <h2 id="aa3"></h2>
+     <script>
+        const number =[50,20,8,100,80,96,78];
+        document.getElementById('aa1').innerHTML= number;
+        number.sort(function (a ,b) {return (a-b)});
+        document.getElementById('aa2').innerHTML= number;   
+        number.sort(function (a ,b) {return (b-a)});
+        document.getElementById('aa3').innerHTML =number;
+     </script>
+     <hr>
+     <!-- - -----------------------------------------  - -->
+     
+     <button onclick="myfunction()">alphabeticall</button>
+     <button onclick="mydata()">number</button>
+     <button onclick="myname()">reverse</button>
+     <h2 id="aa4"></h2>
+   
+
+     <script>
+        const number1 =[50,20,8,100,80,96,78, 10000,200];
+        document.getElementById('aa4').innerHTML=number1;
+
+        function myfunction(){
+            number1.sort ();
+            document.getElementById('aa4').innerHTML=number1;
+        }
+         function mydata(){
+            number1.sort (function (a,b) {return (a-b)});
+            document.getElementById('aa4').innerHTML=number1;
+         }
+         function myname(){
+            number1.sort (function (a ,b) {return (b-a)});
+            document.getElementById('aa4').innerHTML=number1;
+         }
+     </script>
+     <hr>
+     <!-- lowest and highest()... -->
+     <h2 id="aa5"></h2>
+     <h2 id="aa6"></h2>
+     <h2 id="aa7"></h2>
+
+     <script>
+        const number2=[34,25,76,9,18,98,3,67,88];
+        document.getElementById('aa5').innerHTML=number2;
+        number2.sort( function (a ,b) {return (a-b)});
+        document.getElementById('aa6').innerHTML=number2 [0];
+        number2.sort(function (a ,b) {return (b-a)});
+        document.getElementById('aa7').innerHTML= number2 [0];
+     </script>
+     <hr>
+
+     <h2 id="aa9"></h2>
+     <script>
+        const parsan= [
+            {coloar: 'red', city: 'jetpur', age: 20},
+            {coloar: 'blu' , city: 'rajkot',age:18}, 
+            {coloar: 'pink' , city: 'surat',age:24}
+
+        ];
+        mynameis();
+        parsan.sort(function (a ,b) {return a.age - b.age });
+        mynameis();
+
+        function mynameis(){
+        document.getElementById('aa9').innerHTML= 
+        parsan [0].city +" "+ parsan[0].coloar +" "+ parsan[0].age +"<br>"+
+        parsan [1].city +" "+ parsan[1].coloar +" "+ parsan[1].age +"<br>"+
+        parsan [2].city +" "+ parsan[2].coloar +" "+ parsan[2].age
+         }
+     </script>
+     <hr>
+
+<!-- ========================================================== -->
+   
+    
+</body>
+</html>

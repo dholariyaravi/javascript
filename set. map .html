@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="font-size: 30px;">
+    <!-- max number....  -->
+    <h2 id="d1"></h2>
+    <script>
+        function myfunaction(cod) {
+            let max = cod[0];
+            for (let n = 1; n < cod.length; n++) {
+                if (cod[n] > max)
+                    max = cod[n];
+            }
+            return max;
+        }
+        let cod = [1, 34, 64, 7, 23, 14, 29, 330, 56, 89];
+        document.write(myfunaction(cod));
+    </script>
+
+    <!-- min number ....  --> <br>
+    <script>
+        let array = [1, 45, 56, 45, 345, 807, ];
+        let nan = array[0];
+        for (let v = 1; v < array.length; v++) {
+            if (array[v] < nan) {
+                nan = array[v];
+            }
+        }
+        document.write(nan);
+    </script>
+    <hr>
+
+    <!-- ================================================================== -->
+    <h2 id=""></h2>
+
+    <!-- The new Set() Method....  -->
+    <script>
+        const aaa = new Set(['ravi', 'a', 'p', 'o', 't']);
+
+        document.write(aaa.size)
+    </script>
+    <hr>
+    <h3 id="d3"></h3>
+    <script>
+        const ttt = new Set();
+
+        const a = '25';
+        const b = '215';
+        const c = '252';
+        const d = '252';
+
+
+        ttt.add('a');
+        ttt.add('b');
+        ttt.add('c');
+        ttt.add('d');
+
+        document.write(ttt.size)
+    </script>
+    <hr>
+    <!-- javascript map ....  -->
+    <h3 id="g1"></h3>
+    <script>
+        const ggg = new Map([
+
+            ['ravi', 100],
+            ['rajan', 200],
+            ['milan', 300],
+        ])
+        ggg.set('ravi', 300);
+        ggg.delete('rajan');
+
+
+        document.getElementById('g1').innerHTML = ggg.get('ravi');
+    </script>
+
+    <h3 id="g2"></h3>
+
+    <script>
+        const ggg1 = new Map([
+
+            ['ravi', 100],
+            ['rajan', 200],
+            ['milan', 300],
+        ])
+        ggg1.delete('rajan');
+
+
+        document.getElementById('g2').innerHTML = ggg.has('rajan');
+    </script>
+
+    <hr>
+    <h3 id="g3"></h3>
+    <script>
+        const cod1 =([
+            ['apple',32],
+            ['Banana',500],
+            ["oranges", 208]
+        ])
+        let mya = " ";
+        cod1.forEach( function (value ,key){
+            mya += key +" "+ value + '<br>' ;
+        })
+        document.getElementById('g3').innerHTML = mya ;
+    </script>
+
+  <script>
+     let par ={fname: 'ravi',lname: 'dholariya', age : 20};
+     document.write(typeof par)
+  </script>
+
+  
+<!-- JavaScript Type Conversion....  --> <hr>
+
+<!-- Converting Strings to Numbers...  -->
+
+<script>
+
+    let t = '68';
+    let v = +  t ;
+    document.write(typeof v + '<br>' + (typeof t));
+</script>
+
+<!-- Converting Numbers to Strings..  -->
+<h1 id="aa1"></h1>
+<script>
+    let ta = " 190";
+    document.getElementById('aa1').innerHTML = 
+    String (ta) +" <br>" +
+    String (190) + '<br>'+ 
+    String (150 +40);
+</script>
+
+
+</body>
+
+</html>
